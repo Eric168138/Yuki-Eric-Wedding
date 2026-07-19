@@ -3,7 +3,6 @@ import styled from "styled-components";
 const Container = styled.div`
   position: relative;
   padding-top: 48px;
-  padding-bottom: 110px;
 `;
 
 const Flex = styled.div`
@@ -77,7 +76,7 @@ const EmptyBox = styled.div`
   height: 70px;
 `;
 
-/** 이미지 todo 이미지 통일하기*/
+/** 图片 todo 统一图片*/
 const Flower = styled.img`
   @media (max-width: 430px) {
     margin: 10px;

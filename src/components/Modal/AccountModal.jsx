@@ -9,22 +9,22 @@ import { toast } from "react-toastify";
 
 const bridegroom_infos = [
   {
-    name: "소종범",
+    name: "苏钟范",
     account: "",
   },
   {
-    name: "소영식·박숙녀",
+    name: "苏永植·朴淑女",
     account: "",
   },
 ];
 
 const bride_infos = [
   {
-    name: "권유정",
+    name: "权裕贞",
     account: "",
   },
   {
-    name: "권태건·마은영",
+    name: "权泰建·马恩英",
     account: "",
   },
 ];
@@ -32,7 +32,7 @@ const bride_infos = [
 export default function AccountModal({ isBride, isModalOpen, setIsModalOpen }) {
   const setIsOpenModal = useSetRecoilState(modalState);
   const { copyToClipboard } = useCopyClipboard();
-  const notify = () => toast(`해당 정보는 완료되었습니다.`);
+  const notify = () => toast(`该信息已完成。`);
 
   const view_infos = isBride ? bride_infos : bridegroom_infos;
   const handleCloseModal = () => {
@@ -42,11 +42,11 @@ export default function AccountModal({ isBride, isModalOpen, setIsModalOpen }) {
     <>
       <Container className={isModalOpen ? "" : "disable"}>
         <Flex>
-          <Text className="bd col modal-title">{isBride ? "신부측" : "신랑측"}💐</Text>
-          <Text className="copy-info">계좌번호를 누르면 계좌가 복사됩니다.</Text>
+          <Text className="bd col modal-title">{isBride ? "新娘方" : "新郎方"}💐</Text>
+          <Text className="copy-info">点击账号号码即可复制账号。</Text>
           <ItemWrapper>
             <TextWrapper>
-              <Text className="bd col">{isBride ? "신부" : "신랑"}</Text>
+              <Text className="bd col">{isBride ? "新娘" : "新郎"}</Text>
               <Text className="bd"> {view_infos[0].name}</Text>
               <Text
                 className="copy-text"
@@ -63,7 +63,7 @@ export default function AccountModal({ isBride, isModalOpen, setIsModalOpen }) {
                   notify(view_infos[0].name);
                 }}
               >
-                복사
+                复制
               </CopyButton>
             </TextWrapper>
             <TextWrapper>
@@ -83,13 +83,13 @@ export default function AccountModal({ isBride, isModalOpen, setIsModalOpen }) {
                   notify(view_infos[1].name);
                 }}
               >
-                복사
+                复制
               </CopyButton>
             </TextWrapper>
           </ItemWrapper>
           <ButtonWrapper>
             <Button className="button" onClick={() => setIsOpenModal(true)}>
-              축하 연락하기
+              祝贺联系
             </Button>
           </ButtonWrapper>
         </Flex>

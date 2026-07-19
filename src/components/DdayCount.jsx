@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
+import HeartIcon from "../components/Icons/heart";
 
 const TheTimes = ({ targetDate }) => {
   const calculateLastTimes = () => {
@@ -32,9 +33,9 @@ const TheTimes = ({ targetDate }) => {
 
   return (
     <TextWrapper>
-      <Text>Since WeddingDay</Text>
+      <Text>婚禮日後</Text>
       <Text>
-        {days}일 {hours}시간 {minutes}분 {seconds}초
+       <HeartIcon />  {days}天 {hours}時 {minutes}分 {seconds}秒 <HeartIcon />
       </Text>
     </TextWrapper>
   );
@@ -72,10 +73,13 @@ const DdayCount = ({ targetDate }) => {
   if (typeof window === "undefined") return <></>;
 
   return (
+     <TextWrapper>
+    <Text>由現在到婚禮日</Text>
     <Text>
-      {days > 0 && <>{days}일 </>}
-      {hours}시 {minutes}분 {seconds}초 남았습니다.
+     剩餘 {days > 0 && <>{days}天 </>}
+       {hours}時 {minutes}分 {seconds}秒 
     </Text>
+    </TextWrapper>
   );
 };
 

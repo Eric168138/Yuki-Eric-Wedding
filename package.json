@@ -24,11 +24,12 @@
     "react-slick": "^0.30.2",
     "react-toastify": "^10.0.5",
     "recoil": "^0.7.7",
+    "sharp": "^0.35.3",
     "slick-carousel": "^1.8.1",
     "styled-components": "^6.1.8",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "https://devchaeyoung.github.io/invite-you-my-wedding/",
+  "homepage": "https://devchaeyoung.github.io/Yuki-Eric-Wedding",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

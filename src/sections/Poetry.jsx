@@ -4,36 +4,36 @@ import { Flower } from "../styles";
 import { useSetRecoilState } from "recoil";
 import modalState from "../store/infoModal";
 
-export default function Poetry() {
+export default function Poetry() {  
   const setModalState = useSetRecoilState(modalState);
   return (
     <Container>
       <FormWrapper data-aos="flip-left" data-aos-delay="300" data-aos-duration="1200">
-        <BackgoundImage src="image/form-background.png" />
-        <Flower className="f-t" src="image/flower.png" />
+        <BackgoundImage src={process.env.PUBLIC_URL + "/image/form-background.png"} />
+        <Flower className="f-t" src={process.env.PUBLIC_URL + "/image/flower.png"} />
         <TextWrapper className="align-l">
-          <Text>유월의 어느 초여름,</Text>
-          <Text>늘 곁에서 아껴주셨던 고마운 분들을 모십니다.</Text>
-          <Text>있는 그대로 사랑하고</Text>
-          <Text>서로의 존재를 감사하며</Text>
-          <Text>인연이었던 저희 두 사람</Text>
-          <Text>같이 있으면 기분 좋아지는 그대와 함께</Text>
-          <Text>인생의 길을 걸어가겠습니다.</Text>
+          <Text>六月初夏,</Text>
+          <Text>诚邀一直陪伴在身边的感恩之人们。</Text>
+          <Text>爱着彼此本来的样子</Text>
+          <Text>感恩彼此的存在</Text>
+          <Text>结下缘分的我们两人</Text>
+          <Text>和在一起就心情变好的你一起</Text>
+          <Text>将一起走人生的路。</Text>
         </TextWrapper>
-        <Flower className="f-b" src="image/flower.png" />
+        <Flower className="f-b" src={process.env.PUBLIC_URL + "/image/flower.png"} />
       </FormWrapper>
       <FormWrapper className="w1">
         <TextRowWrapper data-aos="fade-up" data-aos-delay="300">
           <TextWrapper className="alignt-l">
-            <Text className="t1">소영식·박숙녀의 아들</Text> <Text className="t1">권태건·마은영의 딸</Text>
+            <Text className="t1">梁滿盈·黃月好的長子</Text> <Text className="t1">黎柱明·鍾春莹的長女</Text>
           </TextWrapper>
           <TextWrapper className="align-r">
-            <Text className="t2">종범</Text> <Text className="t2">유정</Text>
+            <Text className="t2">梁裕豪</Text> <Text className="t2">黎玉琪</Text>
           </TextWrapper>
         </TextRowWrapper>
-        <Button onClick={() => setModalState(true)} data-aos="fade-up" data-aos-delay="200">
-          연락하기
-        </Button>
+        {/* <Button onClick={() => setModalState(true)} data-aos="fade-up" data-aos-delay="200">
+          联系
+        </Button> */}
       </FormWrapper>
     </Container>
   );
@@ -50,7 +50,7 @@ const FormWrapper = styled.div`
   flex-direction: column;
   margin: 0;
   &.w1 {
-    margin: 42px;
+    margin: 20px;
     background-color: #ffff;
   }
 `;
@@ -83,8 +83,12 @@ const TextRowWrapper = styled.div`
 `;
 const BackgoundImage = styled.img`
   position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  z-index: -9999;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
 `;
 
 const Text = styled.span`

@@ -6,9 +6,9 @@ export default function Intro() {
 
   const [fadeout, setFadeout] = useState(false);
 
-  //javascript 작성하기
-  const string = "소종범 ♥️ 권유정 2024년 6월 2일 결혼합니다."; //원하는 텍스트를 string변수 선언
-  const split = string.split(""); //string의 텍스트를 여러개의 문자열로 나눠줌
+  //编写javascript
+  const string = "苏钟范 ♥️ 权裕贞 2024年6月2日 结婚了。"; //在string变量中声明想要的文本
+  const split = string.split(""); //将string的文本分成多个字符串
 
   function dynamic(arr) {
     if (arr.length > 0) {
@@ -21,9 +21,9 @@ export default function Intro() {
 
   useEffect(() => {
     function blink() {
-      textRef.current.classList.toggle("active"); // dynamic에 active 클래스 추가<->삭제 반복
+      textRef.current.classList.toggle("active"); // 反复给dynamic添加<->删除active类
     }
-    setInterval(blink, 500); // blink 함수를 0.5초마다 실행
+    setInterval(blink, 500); // 每0.5秒执行blink函数
   }, []);
 
   useEffect(() => {
@@ -33,7 +33,7 @@ export default function Intro() {
   }, []);
   useEffect(() => {
     setTimeout(() => {
-      dynamic(split); //dynamic함수에 split인자 넣어서 실행
+      dynamic(split); //将split参数传入dynamic函数执行
     }, [800]);
     // eslint-disable-next-line
   }, []);
@@ -118,7 +118,7 @@ const Wrapper = styled.div`
     color: black;
   }
 
-  /*커서모양 만들기*/
+  /*制作光标形状*/
   .hero #dynamic::after {
     content: "";
     display: block;
@@ -131,6 +131,6 @@ const Wrapper = styled.div`
   }
 
   .hero #dynamic.active::after {
-    display: none; /*active 클래스가 있으면 보이지 않음*/
+    display: none; /*如果有active类则不显示*/
   }
 `;

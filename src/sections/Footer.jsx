@@ -3,12 +3,12 @@ import styled from "styled-components";
 export default function Footer() {
   return (
     <Container>
-      <Link target="" href="https://github.com/devchaeyoung/invite-you-my-wedding">
+      {/* <Link target="" href="https://github.com/devchaeyoung/Yuki-Eric-Wedding"> */}
         <Flex>
           <Text>&@copyright</Text>
-          <Text>Dev chaeyoung</Text>
+          <Text>Eric Leung</Text>
         </Flex>
-      </Link>
+      {/* </Link> */}
     </Container>
   );
 }

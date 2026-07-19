@@ -2,7 +2,7 @@ import { atom, useRecoilState } from "recoil";
 import myAudio from "./assets/myAudio.mp3";
 import { useEffect, useRef } from "react";
 
-//배경음악 플레이, 일시정지
+//背景音乐 播放、暂停
 const playState =
   atom <
   boolean >
@@ -14,14 +14,14 @@ const playState =
 function AudioPlayer() {
   const myRef = useRef(null);
   const [play, setPlay] = useRecoilState(playState);
-  // 재생
+  // 播放
   const start = () => {
     if (myRef.current) {
       myRef.current.play();
     }
     setPlay(true);
   };
-  // 일시 정지
+  // 暂停
   const stop = () => {
     if (myRef.current) {
       myRef.current.pause();
@@ -43,11 +43,11 @@ function AudioPlayer() {
       <br />
       <br />
       {play ? (
-        // 일시정지 버튼
-        <button onClick={stop}>일시정지</button>
+        // 暂停按钮
+        <button onClick={stop}>暂停</button>
       ) : (
-        // 재생 버튼
-        <button onClick={start}>재생</button>
+        // 播放按钮
+        <button onClick={start}>播放</button>
       )}
     </>
   );

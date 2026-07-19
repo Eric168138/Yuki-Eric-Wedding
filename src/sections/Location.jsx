@@ -5,78 +5,77 @@ import { toast } from "react-toastify";
 
 /**
  *
- * absolute 들은 가장 가까운 relative 부모 태그 순으로 영향을 받음.
+ * absolute元素按最近的relative父标签顺序受到影响。
  *
  */
 export default function Location({ ref }) {
   const { copyToClipboard } = useCopyClipboard();
-  const notify = target => toast(`${target} 주소가 복사되었습니다.`);
+  const notify = target => toast(`${target} 地址已复制。`);
 
   return (
     <Container ref={ref}>
       <Flex>
         <EmptyBox />
         <TextCategoryTitle id="location">location</TextCategoryTitle>
-        <Text>창원 힐스카이웨딩 10층</Text>
-        <Text>힐그랜드홀</Text>
-        <Text>2024년 6월 2일</Text>
-        <Text>점심 12시 10분</Text>
-        <MapWrapper>
+        <Text>香港九龍塘根德道7號 My Palace
+</Text>
+        <Text>2026年11月1日</Text>
+        <Text>中午 12:00 恭候</Text>
+        {/* <MapWrapper>
           <StyledA href="https://map.kakao.com/link/search/창원 힐스타이웨딩">
-            <MapIcon src="nav-icon/kakaomap.png" />
+            <MapIcon src={process.env.PUBLIC_URL + "/nav-icon/kakaomap.png"} />
           </StyledA>
           <StyledA href="https://map.naver.com/p/search/%EC%B0%BD%EC%9B%90%20%ED%9E%90%20%EC%8A%A4%EC%B9%B4%EC%9D%B4%20%EC%9B%A8%EB%94%A9">
-            <MapIcon src="nav-icon/navermap.png" />
+            <MapIcon src={process.env.PUBLIC_URL + "/nav-icon/navermap.png"} />
           </StyledA>
           <StyledA href="https://tmap.life/62ffaa39">
-            <MapIcon src="nav-icon/tmap.png" />
+            <MapIcon src={process.env.PUBLIC_URL + "/nav-icon/tmap.png"} />
           </StyledA>
           <StyledA href="https://www.google.com/maps/dir//%ED%9E%90%EC%8A%A4%EC%B9%B4%EC%9D%B4+%EC%9B%A8%EB%94%A9%26%EC%BB%A8%EB%B2%A4%EC%85%98+Gyeongsangnam-do,+Changwon-si,+Masanhoewon-gu,+Bongam-dong,+133/data=!4m8!4m7!1m0!1m5!1m1!1s0x356f33b97d989541:0x43b9f3c30f6c73d2!2m2!1d128.6014549!2d35.2190478?entry=ttu">
-            <MapIcon src="nav-icon/googlemap.png" />
+            <MapIcon src={process.env.PUBLIC_URL + "/nav-icon/googlemap.png"} />
           </StyledA>
-        </MapWrapper>
+        </MapWrapper> */}
       </Flex>
       <Flex>
         <LocationInfoBox>
-          <Text className="t">창원 힐스카이웨딩 & 컨벤션 힐그랜드홀</Text>
-          <ImageWedding src="image/weddingholl-image.jpeg" />
-          <Text className="tb">📍 도로명 주소</Text>
+          <ImageWedding src={process.env.PUBLIC_URL + "/image/weddingholl-image.jpg"} />
+          <Text className="tb">📍地址</Text>
           <Text
             className="doc"
             onClick={() => {
-              copyToClipboard("경남 창원시 마산회원구 봉암로 133");
-              notify(`도로명`);
+              copyToClipboard("香港九龍塘根德道7號 My Palace");
+              notify(`地址`);
             }}
           >
-            경남 창원시 마산회원구 봉암로 133
+           香港九龍塘根德道7號 My Palace
           </Text>
-          <Text className="tb">📍 지번 주소</Text>
+          {/* <Text className="tb">📍 地番地址</Text>
           <Text
             className="doc"
             onClick={() => {
-              copyToClipboard("봉암동 391-205");
-              notify(`지번`);
+              copyToClipboard("凤岩洞 391-205");
+              notify(`地番`);
             }}
           >
-            봉암동 391-205
-          </Text>
-          <Text className="tb">🚌 버스를 타고 오실 경우</Text>
+           凤岩洞 391-205
+          </Text> */}
+          <Text className="tb">🚌 乘坐公交车来的情况</Text>
           <Text className="doc">
-            <B>봉암공단 입구</B>에서 하차
+            <B>凤岩工业园区入口</B>下车
           </Text>
-          <Text className="doc">간선 - 107, 114, 160, 116, 162, 163, 164</Text>
-          <Text className="doc">지선 - 257</Text>
-          <Text className="doc">좌석 - 740, 3002</Text>
-          <Text className="tb">🚙 자가용을 이용하실 경우</Text>
+          <Text className="doc">干线 - 107, 114, 160, 116, 162, 163, 164</Text>
+          <Text className="doc">支线 - 257</Text>
+          <Text className="doc">座席 - 740, 3002</Text>
+          <Text className="tb">🚙 使用私家车的情况</Text>
           <Text className="doc">
-            ✔️ 봉암공단사거리, 창원역, 마산시외버스 터미널, 마산 어시장, 마산역 경전선(<B>마산 봉암수원지 입구</B> 유턴 후 <B>300m 직진</B>)
+            ✔️ 凤岩工业园区十字路口, 昌原站, 马山市外巴士客运站, 马山水产市场, 马山站 京田线(<B>马山 凤岩水源地入口</B> 掉头后 <B>直行300m</B>)
           </Text>
-          <Text className="doc">✔️ 진해, 창원, 시외버스터미널, 창원대로 힐스카이 앞 도착</Text>
+          <Text className="doc">✔️ 镇海, 昌原, 市外巴士客运站, 昌原大路 Hill Sky 前到达</Text>
           <Text className="doc">
-            ✔️ <B>자유지역교 이용시</B> GS셀프 주유소 지나 CU편의점 좌회전
+            ✔️ <B>使用自由地区桥时</B> 经过GS自助加油站 CU便利店左转
           </Text>
           <Text className="doc">
-            ✔️ <B>고속도로 이용 시</B> 동마산 IC 진입 10분 거리
+            ✔️ <B>使用高速公路时</B> 东马山IC进入 距离10分钟
           </Text>
         </LocationInfoBox>
         <EmptyBox />
@@ -87,7 +86,6 @@ export default function Location({ ref }) {
 
 const Container = styled.div`
   position: relative;
-  padding-bottom: 110px;
 `;
 const Flex = styled.div`
   width: 100%;

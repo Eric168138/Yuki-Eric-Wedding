@@ -37,7 +37,7 @@ export default function Posting() {
   };
 
   const deleteGuestbook = async id => {
-    alert("삭제 붙가한 게시물입니다.");
+    alert("已删除的帖子。");
     getGuestBooks();
   };
 
@@ -49,24 +49,24 @@ export default function Posting() {
     <>
       <Container>
         <Flex className="blue">
-          <Flower src="image/flower.png" className="f-t" />
+          <Flower src={process.env.PUBLIC_URL + "/image/flower.png"} className="f-t" />
           <TextWrapper>
             <Text>
-              신랑
-              <HeartIcon src="image/heart.png" />
-              신부에게 축하글을 남겨주세요.
+              新郎
+               <HeartIcon />
+              请给新娘留下祝贺信。
             </Text>
             <GoToWriteButton
               onClick={() => {
                 setIsModalOpen(true);
               }}
             >
-              축하글 쓰기💐
+              写祝贺信💐
             </GoToWriteButton>
           </TextWrapper>
           <GuestBookList posts={postList.slice((currentPage - 1) * limit, currentPage * limit)} onDelete={deleteGuestbook} />
           <Pagination count={count} page={currentPage} onChange={handleChange} />
-          <Flower src="image/flower.png" className="f-b" />
+          <Flower src={process.env.PUBLIC_URL + "/image/flower.png"} className="f-b" />
         </Flex>
       </Container>
       <PostModal isModalOpen={isModalOpen} handleCloseModal={handleCloseModal} />

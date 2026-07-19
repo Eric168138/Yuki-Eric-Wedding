@@ -1,10 +1,11 @@
 import styled from "styled-components";
 import { Flex } from "../styles";
+import HeartIcon from "../components/Icons/heart";
 export default function Ending() {
   return (
     <Container>
       <Flex>
-        <Text>행복하게 잘 살겠습니다.</Text>
+        <Text><HeartIcon /> 我們會幸福好好地生活的 <HeartIcon /> </Text>
       </Flex>
     </Container>
   );
@@ -12,7 +13,6 @@ export default function Ending() {
 
 const Container = styled.div`
   position: relative;
-  padding-bottom: 100px;
 `;
 
 const Text = styled.p`

@@ -9,6 +9,8 @@ import { RecoilRoot } from "recoil";
 
 // component
 import Starting from "./sections/Starting";
+import Invite from "./sections/invite";
+import OnePage from "./sections/onePage";
 import Poster from "./sections/Poster";
 import Poetry from "./sections/Poetry";
 import Calendar from "./sections/CalendarSection";
@@ -68,26 +70,31 @@ function App() {
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <RecoilRoot>
-        <StyledLayout>
-          <Sound />
-          <StyledNav className={isShow ? "active" : ""}>배경음악이 준비되어 있습니다.</StyledNav>
-          {isMounted && (
-            <>
-              <Starting />
-              <Poetry />
-              <Calendar />
-              <Gallery />
-              <Location />
-              <WeddingInfo />
-              <Posting />
-              <Ending />
-              <Poster />
-              <Footer />
-            </>
-          )}
-        </StyledLayout>
-        <ToastContainer position="top-center" autoClose={2000} hideProgressBar={true} />
-        <ConnectInfoModal />
+        <PageWrapper>
+          <StyledLayout>
+            <Sound />
+            <StyledNav className={isShow ? "active" : ""}>已为您准备好背景音乐。</StyledNav>
+            {isMounted && (
+              <>
+                <OnePage>
+                  <Invite height="10%" />
+                  <Starting height="90%" />
+                </OnePage>
+                <Poetry />
+                <Calendar />
+                <Location />
+                <Gallery />
+                {/* <WeddingInfo />
+                <Posting /> */}
+                <Poster />
+                <Ending />
+                <Footer />
+              </>
+            )}
+          </StyledLayout>
+          <ToastContainer position="top-center" autoClose={2000} hideProgressBar={true} />
+          <ConnectInfoModal />
+        </PageWrapper>
       </RecoilRoot>
     </BrowserRouter>
   );
@@ -95,10 +102,13 @@ function App() {
 
 const StyledLayout = styled.div`
   width: 100%;
-  max-width: 435px;
+  max-width: 800px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  ${// gap: 40px; 
+  ''}
+  background: #fff;
 
   @media (max-width: 360px) {
     max-width: 360px;
@@ -111,7 +121,7 @@ const StyledNav = styled.div`
   }
 
   width: 100%;
-  max-width: 435px;
+  max-width: 800px;
   height: 48px;
   position: absolute;
   top: 0;
@@ -129,6 +139,20 @@ const StyledNav = styled.div`
   color: #606060;
   &.active {
     transform: translateY(0);
+  }
+`;
+
+const PageWrapper = styled.div`
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("${process.env.PUBLIC_URL}/image/background.jpg");
+  background-repeat: repeat-y;
+  background-size: 100% auto;
+  background-position: center top;
+
+  @media (max-width: 800px) {
+    background-image: none;
   }
 `;
 

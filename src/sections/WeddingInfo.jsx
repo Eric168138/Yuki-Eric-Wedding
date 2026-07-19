@@ -18,14 +18,14 @@ export default function WeddingInfo() {
             <Box>
               <Triangle className={active2 ? "active" : ""} />
 
-              <Text className="info-title">마음 전하실 곳</Text>
+              <Text className="info-title">传达心意的地方</Text>
             </Box>
             <TextWrapper className={active2 ? "active2" : "disable"}>
               <Flex className="wedding-info">
-                <Text className="top-t">비대면으로 축하를 전하고자</Text>
-                <Text>하시는 분들을 위해</Text>
-                <Text>계좌 번호를 기재하였습니다.</Text>
-                <Text>너그러운 마음으로 양해 부탁드리겠습니다.</Text>
+                <Text className="top-t">想要非面对面祝贺的</Text>
+                <Text>各位</Text>
+                <Text>已附上账号号码。</Text>
+                <Text>请多多谅解。</Text>
               </Flex>
               <Box className="box">
                 <ItemBox
@@ -35,8 +35,8 @@ export default function WeddingInfo() {
                     setIsModalOpen(true);
                   }}
                 >
-                  <Text className="t1">신랑측</Text>
-                  <Text className="t1">축하 송금 안내</Text>
+                  <Text className="t1">新郎方</Text>
+                  <Text className="t1">祝贺汇款指南</Text>
                 </ItemBox>
                 <ItemBox
                   className="p-box"
@@ -45,8 +45,8 @@ export default function WeddingInfo() {
                     setIsModalOpen(true);
                   }}
                 >
-                  <Text className="t1">신부측</Text>
-                  <Text className="t1">축하 송금 안내</Text>
+                  <Text className="t1">新娘方</Text>
+                  <Text className="t1">祝贺汇款指南</Text>
                 </ItemBox>
               </Box>
             </TextWrapper>
@@ -55,23 +55,23 @@ export default function WeddingInfo() {
             <AbsoluteLine />
             <Box>
               <Triangle className={active1 ? "active" : ""} />
-              <Text className="info-title">축하 화환 보내기</Text>
+              <Text className="info-title">发送祝贺花环</Text>
             </Box>
             <TextWrapper className={active1 ? "active1" : "disable"}>
               <Flex className="wedding-info">
                 <TextWrapper>
-                  <Text className="t-info">신랑, 신부의 결혼을 축하해주세요.</Text>
-                  <Text className="t-info">예식일에 맞춰 웨딩홀로 배송됩니다.</Text>
+                  <Text className="t-info">祝贺新郎和新娘的结婚。</Text>
+                  <Text className="t-info">将在婚礼当天配送到婚礼场地。</Text>
                   <WrapperInfo>
-                    <Text className="t-info">자세한 안내는</Text>
-                    <Text className="t-info">아래 힐스카이플라워 측으로</Text>
-                    <Text className="t-info">문의 부탁드립니다.</Text>
+                    <Text className="t-info">详情咨询</Text>
+                    <Text className="t-info">请联系下方 Hill Sky Flower</Text>
+                    <Text className="t-info">谢谢。</Text>
                   </WrapperInfo>
                   <WrapperNumber>
                     <Text onClick={() => (window.document.location.href = "tel:010-3836-9782")}>📞 010-3836-9782</Text>
                     <Text onClick={() => (window.document.location.href = "tel:010-3221-9782")}>📞 010-3221-9782</Text>
                   </WrapperNumber>
-                  <Text className="t-info">전화번호를 누르시면 연락처로 연결됩니다.</Text>
+                  <Text className="t-info">点击电话号码将连接到联系方式。</Text>
                 </TextWrapper>
               </Flex>
             </TextWrapper>
@@ -85,7 +85,6 @@ export default function WeddingInfo() {
 
 const Container = styled.div`
   position: relative;
-  padding-bottom: 80px;
 `;
 
 const WrapperNumber = styled.div`

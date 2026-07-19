@@ -11,11 +11,11 @@ const ConfirmModal = ({ fetchDeleteGuestBook, isModalOpen, handleCloseModal, gue
   const [password, setPassword] = useState("");
   const [element, setElement] = useState(null);
 
-  const notify = () => toast("방명록이 삭제되었습니다.");
+  const notify = () => toast("留言簿已删除。");
 
   const onDeleteGuestBook = () => {
     if (password !== guestBookItem.password) {
-      alert("비밀번호가 틀립니다");
+      alert("密码不正确");
       return;
     }
     notify();
@@ -37,7 +37,7 @@ const ConfirmModal = ({ fetchDeleteGuestBook, isModalOpen, handleCloseModal, gue
     <>
       <Container className={isModalOpen ? "" : "disabled"}>
         <Header>
-          <HeaderText>삭제하시겠습니까?</HeaderText>
+          <HeaderText>确定要删除吗？</HeaderText>
         </Header>
         <Wrapper>
           <TextWrapper>
@@ -45,15 +45,15 @@ const ConfirmModal = ({ fetchDeleteGuestBook, isModalOpen, handleCloseModal, gue
               value={password}
               onChange={e => setPassword(e.target.value)}
               type="password"
-              label={"작성 시 입력하신 비밀번호를 입력해주세요."}
+              label={"请输入创建时设置的密码。"}
             />
           </TextWrapper>
           <ButtonWrapper>
-            <Button className="button point" onClick={() => alert("삭제 불가한 게시물입니다.")}>
-              삭제
+            <Button className="button point" onClick={() => alert("这是不可删除的帖子。")}>
+              删除
             </Button>
             <Button className="button" onClick={handleCloseModal}>
-              닫기
+              关闭
             </Button>
           </ButtonWrapper>
         </Wrapper>

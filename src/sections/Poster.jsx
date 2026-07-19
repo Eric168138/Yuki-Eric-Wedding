@@ -5,14 +5,14 @@ export default function Poster() {
     <Container>
       <ImageWrapper>
         <RightTextBox>
-          <Text>종범</Text>
-          <Text>유정</Text>
+          <Text>Yuki & Eric</Text>
         </RightTextBox>
-        <Image src="image/poster-image.jpeg" />
+        <Image src={process.env.PUBLIC_URL + "/image/poster-image.jpeg"} />
         <Absolute>
-          <Text className="f6">Yujeong & Jongbum</Text>
-          <Text>창원 힐스카이웨딩 10층 힐그랜드홀</Text>
-          <Text className="f3">2024.06.02 Jun 12:10</Text>
+          <Text className="f6">Yuki & Eric</Text>
+          <Text>香港九龍塘根德道7號 My Palace
+</Text>
+          <Text className="f3">2026.11.1 Nov 12:00</Text>
         </Absolute>
       </ImageWrapper>
     </Container>

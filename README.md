@@ -9,7 +9,7 @@
 추억보관용 모바일 청첩장입니다.
 
 > 배포 URL
-> https://devchaeyoung.github.io/invite-you-my-wedding/
+> https://devchaeyoung.github.io/Yuki-Eric-Wedding/
 
 ## 실행 방법
 
@@ -18,7 +18,7 @@
 터미널 창에서 아래 명령어 순서대로 입력하기
 
 ```bash
-$ git clone https://github.com/devchaeyoung/invite-you-my-wedding.git
+$ git clone https://github.com/devchaeyoung/Yuki-Eric-Wedding.git
 $ yarn
 $ yarn start
 ```

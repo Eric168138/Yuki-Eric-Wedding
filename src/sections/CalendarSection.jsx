@@ -2,28 +2,37 @@ import styled from "styled-components";
 import { EmptyBox, Flex } from "../styles";
 import HeartIcon from "../components/Icons/heart";
 
-import { TheTimes } from "../components/DdayCount";
+import { DdayCount, TheTimes } from "../components/DdayCount";
+
+const targetDate = new Date(2025, 11, 1, 12, 0);
 
 export default function CalendarSection() {
+  const isPast = new Date() > targetDate;
   return (
     <Container>
       <Flex>
         <TextWrapper data-aos="zoom-in-up" data-aos-delay="100">
-          <Text>2024년 6월 2일</Text>
-          <Text>오후 12시 10분</Text>
-          <Text>창원 힐스카이 10층 힐그랜드홀</Text>
+          <Text>2026年11月1日</Text>
+          <Text>12:00 恭候</Text>
+          <Text>12:30 證婚</Text>
+          <Text>13:30 入席</Text>
+          <Text>香港九龍塘根德道7號 My Palace
+</Text>
         </TextWrapper>
-        <EmptyBox />
-        <Image src="image/calendar.png" data-aos="flip-left" data-aos-easing="ease-out-cubic" />
+        {/* <EmptyBox /> */}
+        <Image src={process.env.PUBLIC_URL + "/image/calendar.png"} data-aos="flip-left" data-aos-easing="ease-out-cubic" />
         <TextWrapper data-aos="zoom-in-up" data-aos-delay="100">
-          <Text className="countDownText">
-            종범
-            <HeartIcon src="image/heart.png" />
-            유정
-          </Text>
+          {/* <Text className="countDownText">
+            钟范
+            <HeartIcon />
+            裕贞
+          </Text> */}
 
           <Flex>
-            <TheTimes targetDate={new Date(2024, 5, 2, 12, 10)} />
+            {isPast
+              ? <TheTimes targetDate={targetDate} />
+              : <DdayCount targetDate={targetDate} />
+            }
           </Flex>
         </TextWrapper>
       </Flex>
@@ -33,7 +42,6 @@ export default function CalendarSection() {
 const Container = styled.div`
   position: relative;
   padding-top: 48px;
-  padding-bottom: 84px;
 `;
 
 const Text = styled.p`

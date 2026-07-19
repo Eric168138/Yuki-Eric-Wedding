@@ -27,64 +27,64 @@ export default function ConnectInfoModal() {
     <>
       <Container className={isModalOpen ? "" : "disable"}>
         <Flex>
-          <H1Text>마음 전하는 곳💐</H1Text>
+          <H1Text>传达心意的地方💐</H1Text>
           <GuideWrapper>
             <NameWrapper>
-              *<CallingBox>축하 전화하기📞</CallingBox> <GuideText>를 누르면 전화번호부로 연결됩니다. </GuideText>
+              *<CallingBox>祝贺电话📞</CallingBox> <GuideText>点击后将连接到通讯录。 </GuideText>
             </NameWrapper>
             <NameWrapper>
-              *<MessageBox>축하 메시지 ✉️</MessageBox>
-              <GuideText>를 누르면 문자 메시지로 연결됩니다.</GuideText>
+              *<MessageBox>祝贺短信 ✉️</MessageBox>
+              <GuideText>点击后将连接到短信。</GuideText>
             </NameWrapper>
           </GuideWrapper>
           <NameListWrapper>
-            <Text className="h2">신랑💍신부</Text>
+            <Text className="h2">新郎💍新娘</Text>
             <NameWrapper>
-              <Text>신랑 </Text> <B>소종범</B>
-              <CallingBox onClick={() => alert("현재 완료된 이벤트입니다.")}>축하 전화하기📞</CallingBox>
-              <MessageBox onClick={() => alert("현재 완료된 이벤트입니다.")}>축하 메시지 ✉️</MessageBox>
+              <Text>新郎 </Text> <B>苏钟范</B>
+              <CallingBox onClick={() => alert("当前活动已完成。")}>祝贺电话📞</CallingBox>
+              <MessageBox onClick={() => alert("当前活动已完成。")}>祝贺短信 ✉️</MessageBox>
             </NameWrapper>
             <NameWrapper>
-              <Text>신부 </Text> <B>권유정</B>
-              <CallingBox onClick={() => alert("현재 완료된 이벤트입니다.")}>축하 전화하기📞</CallingBox>
-              <MessageBox onClick={() => alert("현재 완료된 이벤트입니다.")}>축하 메시지 ✉️</MessageBox>
-            </NameWrapper>
-          </NameListWrapper>
-          <NameListWrapper>
-            <NameWrapper>
-              <Text className="h2 blue">신랑</Text>
-              <Text className="h2 ">혼주측</Text>
-            </NameWrapper>
-
-            <NameWrapper>
-              <Text>신랑 아버지 </Text> <B>소영식</B>
-              <CallingBox onClick={() => alert("현재 완료된 이벤트입니다.")}>축하 전화하기📞</CallingBox>
-              <MessageBox onClick={() => alert("현재 완료된 이벤트입니다.")}>축하 메시지 ✉️</MessageBox>
-            </NameWrapper>
-            <NameWrapper>
-              <Text>신랑 어머니 </Text> <B>박숙녀</B>
-              <CallingBox onClick={() => alert("현재 완료된 이벤트입니다.")}>축하 전화하기📞</CallingBox>
-              <MessageBox onClick={() => alert("현재 완료된 이벤트입니다.")}>축하 메시지 ✉️</MessageBox>
+              <Text>新娘 </Text> <B>权裕贞</B>
+              <CallingBox onClick={() => alert("当前活动已完成。")}>祝贺电话📞</CallingBox>
+              <MessageBox onClick={() => alert("当前活动已完成。")}>祝贺短信 ✉️</MessageBox>
             </NameWrapper>
           </NameListWrapper>
           <NameListWrapper>
             <NameWrapper>
-              <Text className="h2 pink">신부</Text>
-              <Text className="h2 ">혼주측</Text>
+              <Text className="h2 blue">新郎</Text>
+              <Text className="h2 ">婚主方</Text>
             </NameWrapper>
 
             <NameWrapper>
-              <Text>신부 아버지 </Text> <B>권태건</B>
-              <CallingBox onClick={() => alert("현재 완료된 이벤트입니다.")}>축하 전화하기📞</CallingBox>
-              <MessageBox onClick={() => alert("현재 완료된 이벤트입니다.")}>축하 메시지 ✉️</MessageBox>
+              <Text>新郎父亲 </Text> <B>苏永植</B>
+              <CallingBox onClick={() => alert("当前活动已完成。")}>祝贺电话📞</CallingBox>
+              <MessageBox onClick={() => alert("当前活动已完成。")}>祝贺短信 ✉️</MessageBox>
             </NameWrapper>
             <NameWrapper>
-              <Text>신부 어머니 </Text> <B>마은영</B>
-              <CallingBox onClick={() => alert("현재 완료된 이벤트입니다.")}>축하 전화하기📞</CallingBox>
-              <MessageBox onClick={() => alert("현재 완료된 이벤트입니다.")}>축하 메시지 ✉️</MessageBox>
+              <Text>新郎母亲 </Text> <B>朴淑女</B>
+              <CallingBox onClick={() => alert("当前活动已完成。")}>祝贺电话📞</CallingBox>
+              <MessageBox onClick={() => alert("当前活动已完成。")}>祝贺短信 ✉️</MessageBox>
             </NameWrapper>
           </NameListWrapper>
-          <CloseButton onClick={handleCloseModal}>닫기</CloseButton>
+          <NameListWrapper>
+            <NameWrapper>
+              <Text className="h2 pink">新娘</Text>
+              <Text className="h2 ">婚主方</Text>
+            </NameWrapper>
+
+            <NameWrapper>
+              <Text>新娘父亲 </Text> <B>权泰建</B>
+              <CallingBox onClick={() => alert("当前活动已完成。")}>祝贺电话📞</CallingBox>
+              <MessageBox onClick={() => alert("当前活动已完成。")}>祝贺短信 ✉️</MessageBox>
+            </NameWrapper>
+            <NameWrapper>
+              <Text>新娘母亲 </Text> <B>马恩英</B>
+              <CallingBox onClick={() => alert("当前活动已完成。")}>祝贺电话📞</CallingBox>
+              <MessageBox onClick={() => alert("当前活动已完成。")}>祝贺短信 ✉️</MessageBox>
+            </NameWrapper>
+          </NameListWrapper>
+          <CloseButton onClick={handleCloseModal}>关闭</CloseButton>
         </Flex>
       </Container>
       <Dimed className={isModalOpen ? "" : "disable"} onClick={handleCloseModal} />
