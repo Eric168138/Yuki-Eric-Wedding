@@ -3,7 +3,7 @@ import styled from "styled-components";
 export default function Footer() {
   return (
     <Container>
-      {/* <Link target="" href="https://github.com/devchaeyoung/Yuki-Eric-Wedding"> */}
+      {/* <Link target="" href="https://github.com/Eric168138/Yuki-Eric-Wedding.git"> */}
         <Flex>
           <Text>&@copyright</Text>
           <Text>Eric Leung</Text>
