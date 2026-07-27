@@ -27,27 +27,27 @@ export default function ConnectInfoModal() {
     <>
       <Container className={isModalOpen ? "" : "disable"}>
         <Flex>
-          <H1Text>传达心意的地方💐</H1Text>
+          <H1Text>傳達心意的地方💐</H1Text>
           <GuideWrapper>
             <NameWrapper>
-              *<CallingBox>祝贺电话📞</CallingBox> <GuideText>点击后将连接到通讯录。 </GuideText>
+              *<CallingBox>祝賀電話📞</CallingBox> <GuideText>點擊後將連接到通訊錄。 </GuideText>
             </NameWrapper>
             <NameWrapper>
-              *<MessageBox>祝贺短信 ✉️</MessageBox>
-              <GuideText>点击后将连接到短信。</GuideText>
+              *<MessageBox>祝賀短信 ✉️</MessageBox>
+              <GuideText>點擊後將連接到短信。</GuideText>
             </NameWrapper>
           </GuideWrapper>
           <NameListWrapper>
             <Text className="h2">新郎💍新娘</Text>
             <NameWrapper>
-              <Text>新郎 </Text> <B>苏钟范</B>
-              <CallingBox onClick={() => alert("当前活动已完成。")}>祝贺电话📞</CallingBox>
-              <MessageBox onClick={() => alert("当前活动已完成。")}>祝贺短信 ✉️</MessageBox>
+              <Text>新郎 </Text> <B>蘇鍾範</B>
+              <CallingBox onClick={() => alert("當前活動已完成。")}>祝賀電話📞</CallingBox>
+              <MessageBox onClick={() => alert("當前活動已完成。")}>祝賀短信 ✉️</MessageBox>
             </NameWrapper>
             <NameWrapper>
-              <Text>新娘 </Text> <B>权裕贞</B>
-              <CallingBox onClick={() => alert("当前活动已完成。")}>祝贺电话📞</CallingBox>
-              <MessageBox onClick={() => alert("当前活动已完成。")}>祝贺短信 ✉️</MessageBox>
+              <Text>新娘 </Text> <B>權裕貞</B>
+              <CallingBox onClick={() => alert("當前活動已完成。")}>祝賀電話📞</CallingBox>
+              <MessageBox onClick={() => alert("當前活動已完成。")}>祝賀短信 ✉️</MessageBox>
             </NameWrapper>
           </NameListWrapper>
           <NameListWrapper>
@@ -57,14 +57,14 @@ export default function ConnectInfoModal() {
             </NameWrapper>
 
             <NameWrapper>
-              <Text>新郎父亲 </Text> <B>苏永植</B>
-              <CallingBox onClick={() => alert("当前活动已完成。")}>祝贺电话📞</CallingBox>
-              <MessageBox onClick={() => alert("当前活动已完成。")}>祝贺短信 ✉️</MessageBox>
+              <Text>新郎父親 </Text> <B>蘇永植</B>
+              <CallingBox onClick={() => alert("當前活動已完成。")}>祝賀電話📞</CallingBox>
+              <MessageBox onClick={() => alert("當前活動已完成。")}>祝賀短信 ✉️</MessageBox>
             </NameWrapper>
             <NameWrapper>
-              <Text>新郎母亲 </Text> <B>朴淑女</B>
-              <CallingBox onClick={() => alert("当前活动已完成。")}>祝贺电话📞</CallingBox>
-              <MessageBox onClick={() => alert("当前活动已完成。")}>祝贺短信 ✉️</MessageBox>
+              <Text>新郎母親 </Text> <B>朴淑女</B>
+              <CallingBox onClick={() => alert("當前活動已完成。")}>祝賀電話📞</CallingBox>
+              <MessageBox onClick={() => alert("當前活動已完成。")}>祝賀短信 ✉️</MessageBox>
             </NameWrapper>
           </NameListWrapper>
           <NameListWrapper>
@@ -74,17 +74,17 @@ export default function ConnectInfoModal() {
             </NameWrapper>
 
             <NameWrapper>
-              <Text>新娘父亲 </Text> <B>权泰建</B>
-              <CallingBox onClick={() => alert("当前活动已完成。")}>祝贺电话📞</CallingBox>
-              <MessageBox onClick={() => alert("当前活动已完成。")}>祝贺短信 ✉️</MessageBox>
+              <Text>新娘父親 </Text> <B>權泰建</B>
+              <CallingBox onClick={() => alert("當前活動已完成。")}>祝賀電話📞</CallingBox>
+              <MessageBox onClick={() => alert("當前活動已完成。")}>祝賀短信 ✉️</MessageBox>
             </NameWrapper>
             <NameWrapper>
-              <Text>新娘母亲 </Text> <B>马恩英</B>
-              <CallingBox onClick={() => alert("当前活动已完成。")}>祝贺电话📞</CallingBox>
-              <MessageBox onClick={() => alert("当前活动已完成。")}>祝贺短信 ✉️</MessageBox>
+              <Text>新娘母親 </Text> <B>馬恩英</B>
+              <CallingBox onClick={() => alert("當前活動已完成。")}>祝賀電話📞</CallingBox>
+              <MessageBox onClick={() => alert("當前活動已完成。")}>祝賀短信 ✉️</MessageBox>
             </NameWrapper>
           </NameListWrapper>
-          <CloseButton onClick={handleCloseModal}>关闭</CloseButton>
+          <CloseButton onClick={handleCloseModal}>關閉</CloseButton>
         </Flex>
       </Container>
       <Dimed className={isModalOpen ? "" : "disable"} onClick={handleCloseModal} />

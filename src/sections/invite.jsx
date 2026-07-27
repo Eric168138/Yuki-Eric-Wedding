@@ -1,18 +1,18 @@
-import { TextWrapper, Text } from "../styles";
-import styled from "styled-components";
+import { TextWrapper, Text } from '../styles';
+import styled from 'styled-components';
 
 export default function Invite({ height }) {
   return (
     <StyledWrapper style={{ height }}>
       <InviteText
         data-aos="fade-up"
-        data-aos-delay="1000"
-        data-aos-duration="1200"
-        style={{ fontFamily: "yleeMortalHeart-ImmortalMemory" }}
+        data-aos-delay="500"
+        data-aos-duration="600"
+        style={{ fontFamily: 'yleeMortalHeart-ImmortalMemory' }}
       >
         Invite you
       </InviteText>
-      <Text className="t2 mb-18" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="1800">
+      <Text className="t2 mb-18" data-aos="fade-up" data-aos-delay="500" data-aos-duration="900">
         邀請你參加 Yuki 同 Eric 的婚禮
       </Text>
     </StyledWrapper>
@@ -20,11 +20,13 @@ export default function Invite({ height }) {
 }
 
 const InviteText = styled.p`
-  font-size: 1.2rem;
-  /* margin-top: 3rem; */
   margin-bottom: 0;
   font-size: 4rem;
   padding: 4px;
+
+  @media (max-width: 800px) {
+    font-size: 2.5rem;
+  }
 `;
 
 const StyledWrapper = styled(TextWrapper)`

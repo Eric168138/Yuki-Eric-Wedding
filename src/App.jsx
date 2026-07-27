@@ -1,40 +1,40 @@
 // styles
-import "./font.css";
-import "./App.css";
-import styled from "styled-components";
+import './font.css';
+import './App.css';
+import styled from 'styled-components';
 
 // hooks
-import { useEffect, useState } from "react";
-import { RecoilRoot } from "recoil";
+import { useEffect, useState } from 'react';
+import { RecoilRoot } from 'recoil';
 
 // component
-import Starting from "./sections/Starting";
-import Invite from "./sections/invite";
-import OnePage from "./sections/onePage";
-import Poster from "./sections/Poster";
-import Poetry from "./sections/Poetry";
-import Calendar from "./sections/CalendarSection";
-import Gallery from "./sections/Gallery";
-import Location from "./sections/Location";
-import WeddingInfo from "./sections/WeddingInfo";
-import Posting from "./sections/Posting";
-import Ending from "./sections/Ending";
-import Footer from "./sections/Footer";
-import ConnectInfoModal from "./components/Modal/ConnectInfoModal";
+import Starting from './sections/Starting';
+import Invite from './sections/invite';
+import OnePage from './sections/onePage';
+import Poster from './sections/Poster';
+import Poetry from './sections/Poetry';
+import Calendar from './sections/CalendarSection';
+import Gallery from './sections/Gallery';
+import Location from './sections/Location';
+import WeddingInfo from './sections/WeddingInfo';
+import Posting from './sections/Posting';
+import Ending from './sections/Ending';
+import Footer from './sections/Footer';
+import ConnectInfoModal from './components/Modal/ConnectInfoModal';
 
 // slick
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 // aos
-import AOS from "aos";
-import "aos/dist/aos.css";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 // toast
-import { ToastContainer } from "react-toastify";
+import { ToastContainer } from 'react-toastify';
 
-import Sound from "./components/Sound/Sound";
-import { BrowserRouter } from "react-router-dom";
+import Sound from './components/Sound/Sound';
+import { BrowserRouter } from 'react-router-dom';
 
 // icon
 
@@ -52,33 +52,33 @@ function App() {
     setIsMounted(true);
   }, []);
 
-  useEffect(() => {
-    const showTimeout = setTimeout(() => {
-      setIsShow(() => true);
-    }, 400);
+  const handlePlay = () => {
+    setIsShow(true);
+    setTimeout(() => {
+      setIsShow(false);
+    }, 2500);
+  };
 
-    const hideTimeout = setTimeout(() => {
-      setIsShow(() => false);
-    }, 2200);
-
-    return () => {
-      clearTimeout(showTimeout);
-      clearTimeout(hideTimeout);
-    };
-  }, []);
+  const targetDate = new Date(2026, 11, 1, 12, 0);
 
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <RecoilRoot>
         <PageWrapper>
           <StyledLayout>
-            <Sound />
-            <StyledNav className={isShow ? "active" : ""}>已为您准备好背景音乐。</StyledNav>
+            <Sound onPlay={handlePlay} />
+            <StyledNav className={isShow ? 'active' : ''}>已為您準備好背景音樂。</StyledNav>
             {isMounted && (
               <>
                 <OnePage>
-                  <Invite height="10%" />
-                  <Starting height="90%" />
+                  {new Date() < targetDate ? (
+                    <>
+                      <Invite height="10%" />
+                      <Starting height="90%" />
+                    </>
+                  ) : (
+                    <Starting height="100%" />
+                  )}
                 </OnePage>
                 <Poetry />
                 <Calendar />
@@ -106,8 +106,10 @@ const StyledLayout = styled.div`
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  ${// gap: 40px; 
-  ''}
+  ${
+    // gap: 40px;
+    ''
+  }
   background: #fff;
 
   @media (max-width: 360px) {
@@ -121,10 +123,11 @@ const StyledNav = styled.div`
   }
 
   width: 100%;
-  max-width: 800px;
   height: 48px;
-  position: absolute;
+  position: fixed;
   top: 0;
+  left: 0;
+  z-index: 999;
 
   transform: translateY(-48px);
 
@@ -146,7 +149,7 @@ const PageWrapper = styled.div`
   position: relative;
   width: 100%;
   min-height: 100vh;
-  background-image: url("${process.env.PUBLIC_URL}/image/background.jpg");
+  background-image: url('${process.env.PUBLIC_URL}/image/background.jpg');
   background-repeat: repeat-y;
   background-size: 100% auto;
   background-position: center top;

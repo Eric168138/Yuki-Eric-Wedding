@@ -6,9 +6,9 @@ export default function Intro() {
 
   const [fadeout, setFadeout] = useState(false);
 
-  //编写javascript
-  const string = "苏钟范 ♥️ 权裕贞 2024年6月2日 结婚了。"; //在string变量中声明想要的文本
-  const split = string.split(""); //将string的文本分成多个字符串
+  //編寫javascript
+  const string = "蘇鍾範 ♥️ 權裕貞 2024年6月2日 結婚了。"; //在string变量中声明想要的文本
+  const split = string.split(""); //將string的文本分成多個字符串
 
   function dynamic(arr) {
     if (arr.length > 0) {
@@ -21,9 +21,9 @@ export default function Intro() {
 
   useEffect(() => {
     function blink() {
-      textRef.current.classList.toggle("active"); // 反复给dynamic添加<->删除active类
+      textRef.current.classList.toggle("active"); // 反覆給dynamic添加<->刪除active類
     }
-    setInterval(blink, 500); // 每0.5秒执行blink函数
+    setInterval(blink, 500); // 每0.5秒執行blink函數
   }, []);
 
   useEffect(() => {
@@ -33,7 +33,7 @@ export default function Intro() {
   }, []);
   useEffect(() => {
     setTimeout(() => {
-      dynamic(split); //将split参数传入dynamic函数执行
+      dynamic(split); //將split參數傳入dynamic函數執行
     }, [800]);
     // eslint-disable-next-line
   }, []);
@@ -118,7 +118,7 @@ const Wrapper = styled.div`
     color: black;
   }
 
-  /*制作光标形状*/
+  /*製作光標形狀*/
   .hero #dynamic::after {
     content: "";
     display: block;

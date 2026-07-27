@@ -7,7 +7,7 @@ import { ServerStyleSheet } from "styled-components";
 
 const sheet = new ServerStyleSheet();
 const app = express();
-// 读取客户端构建的html使用
+// 讀取客戶端構建的html使用
 const html = fs.readFileSync(path.resolve(__dirname, "../client/index.html"), "utf-8");
 
 app.get("/", (req, res) => {
@@ -18,8 +18,8 @@ app.get("/", (req, res) => {
     .replace("__STYLE_FROM_SERVER__", styleTags);
   res.send(result);
 });
-// 除上述 / 以外的路径请求时(js, css等)
-// 提供dist/client文件夹中的文件
+// 除上述 / 以外的路徑請求時(js, css等)
+// 提供dist/client文件夾中的文件
 app.use("/", express.static("dist/client"));
 
 app.listen(3000, () => {

@@ -37,7 +37,7 @@ export default function Posting() {
   };
 
   const deleteGuestbook = async id => {
-    alert("已删除的帖子。");
+    alert("已刪除的帖子。");
     getGuestBooks();
   };
 
@@ -54,14 +54,14 @@ export default function Posting() {
             <Text>
               新郎
                <HeartIcon />
-              请给新娘留下祝贺信。
+              請給新娘留下祝賀信。
             </Text>
             <GoToWriteButton
               onClick={() => {
                 setIsModalOpen(true);
               }}
             >
-              写祝贺信💐
+              寫祝賀信💐
             </GoToWriteButton>
           </TextWrapper>
           <GuestBookList posts={postList.slice((currentPage - 1) * limit, currentPage * limit)} onDelete={deleteGuestbook} />

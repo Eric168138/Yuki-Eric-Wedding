@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const Container = styled.div`
   position: relative;
@@ -34,7 +34,7 @@ const TextWrapper = styled.div`
 `;
 
 const TextCategoryTitle = styled.p`
-  font-family: "yleeMortalHeart-ImmortalMemory";
+  font-family: 'yleeMortalHeart-ImmortalMemory';
   font-size: 3rem;
   font-weight: bold;
   color: #4d4d4d;
@@ -51,7 +51,7 @@ const Text = styled.p`
     margin-top: 30px;
     padding: 4px;
     font-size: 50px;
-    font-family: "yleeMortalHeart-ImmortalMemory";
+    font-family: 'yleeMortalHeart-ImmortalMemory';
   }
   &.t2 {
     font-size: 1.6rem;
@@ -67,7 +67,7 @@ const Text = styled.p`
     margin-top: 50px;
   }
   &.fs {
-    font-family: "yleeMortalHeart-ImmortalMemory";
+    font-family: 'yleeMortalHeart-ImmortalMemory';
   }
 `;
 
@@ -76,7 +76,7 @@ const EmptyBox = styled.div`
   height: 70px;
 `;
 
-/** 图片 todo 统一图片*/
+/** 圖片 todo 統一圖片*/
 const Flower = styled.img`
   @media (max-width: 430px) {
     margin: 10px;

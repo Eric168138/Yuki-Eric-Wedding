@@ -1,10 +1,10 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export default function Starting({ height }) {
   return (
     <Container style={{ height }}>
       <ImgWrapper data-aos="flip-left" data-aos-delay="1000" data-aos-duration="1800">
-        <Image src={process.env.PUBLIC_URL + "/image/main-card.jpeg"} />
+        <Image src={process.env.PUBLIC_URL + '/image/Starting.jpg'} />
       </ImgWrapper>
     </Container>
   );
@@ -23,5 +23,5 @@ const ImgWrapper = styled.div`
 const Image = styled.img`
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 `;

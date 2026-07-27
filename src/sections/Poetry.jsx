@@ -1,31 +1,32 @@
-import Button from "../components/Button/Button";
-import styled from "styled-components";
-import { Flower } from "../styles";
-import { useSetRecoilState } from "recoil";
-import modalState from "../store/infoModal";
+import Button from '../components/Button/Button';
+import styled from 'styled-components';
+import { Flower } from '../styles';
+import { useSetRecoilState } from 'recoil';
+import modalState from '../store/infoModal';
 
-export default function Poetry() {  
+export default function Poetry() {
   const setModalState = useSetRecoilState(modalState);
   return (
     <Container>
       <FormWrapper data-aos="flip-left" data-aos-delay="300" data-aos-duration="1200">
-        <BackgoundImage src={process.env.PUBLIC_URL + "/image/form-background.png"} />
-        <Flower className="f-t" src={process.env.PUBLIC_URL + "/image/flower.png"} />
+        <BackgoundImage src={process.env.PUBLIC_URL + '/image/form-background.png'} />
+        <Flower className="f-t" src={process.env.PUBLIC_URL + '/image/flower.png'} />
         <TextWrapper className="align-l">
-          <Text>六月初夏,</Text>
-          <Text>诚邀一直陪伴在身边的感恩之人们。</Text>
-          <Text>爱着彼此本来的样子</Text>
+          <Text>十一月,</Text>
+          <Text>誠邀一直陪伴在身邊的感恩之人們。</Text>
+          <Text>愛著彼此本來的樣子</Text>
           <Text>感恩彼此的存在</Text>
-          <Text>结下缘分的我们两人</Text>
-          <Text>和在一起就心情变好的你一起</Text>
-          <Text>将一起走人生的路。</Text>
+          <Text>結下緣分的我們兩人</Text>
+          <Text>和在一起就心情變好的你一起</Text>
+          <Text>將一起走人生的路。</Text>
         </TextWrapper>
-        <Flower className="f-b" src={process.env.PUBLIC_URL + "/image/flower.png"} />
+        <Flower className="f-b" src={process.env.PUBLIC_URL + '/image/flower.png'} />
       </FormWrapper>
       <FormWrapper className="w1">
         <TextRowWrapper data-aos="fade-up" data-aos-delay="300">
           <TextWrapper className="alignt-l">
-            <Text className="t1">梁滿盈·黃月好的長子</Text> <Text className="t1">黎柱明·鍾春莹的長女</Text>
+            <Text className="t1">梁滿盈·黃月好的長子</Text>{' '}
+            <Text className="t1">黎柱明·鍾春瑩的長女</Text>
           </TextWrapper>
           <TextWrapper className="align-r">
             <Text className="t2">梁裕豪</Text> <Text className="t2">黎玉琪</Text>

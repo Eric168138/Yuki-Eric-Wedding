@@ -18,14 +18,14 @@ export default function WeddingInfo() {
             <Box>
               <Triangle className={active2 ? "active" : ""} />
 
-              <Text className="info-title">传达心意的地方</Text>
+              <Text className="info-title">傳達心意的地方</Text>
             </Box>
             <TextWrapper className={active2 ? "active2" : "disable"}>
               <Flex className="wedding-info">
-                <Text className="top-t">想要非面对面祝贺的</Text>
+                <Text className="top-t">想要非面對面祝賀的</Text>
                 <Text>各位</Text>
-                <Text>已附上账号号码。</Text>
-                <Text>请多多谅解。</Text>
+                <Text>已附上賬號號碼。</Text>
+                <Text>請多多諒解。</Text>
               </Flex>
               <Box className="box">
                 <ItemBox
@@ -36,7 +36,7 @@ export default function WeddingInfo() {
                   }}
                 >
                   <Text className="t1">新郎方</Text>
-                  <Text className="t1">祝贺汇款指南</Text>
+                  <Text className="t1">祝賀匯款指南</Text>
                 </ItemBox>
                 <ItemBox
                   className="p-box"
@@ -46,7 +46,7 @@ export default function WeddingInfo() {
                   }}
                 >
                   <Text className="t1">新娘方</Text>
-                  <Text className="t1">祝贺汇款指南</Text>
+                  <Text className="t1">祝賀匯款指南</Text>
                 </ItemBox>
               </Box>
             </TextWrapper>
@@ -55,23 +55,23 @@ export default function WeddingInfo() {
             <AbsoluteLine />
             <Box>
               <Triangle className={active1 ? "active" : ""} />
-              <Text className="info-title">发送祝贺花环</Text>
+              <Text className="info-title">發送祝賀花環</Text>
             </Box>
             <TextWrapper className={active1 ? "active1" : "disable"}>
               <Flex className="wedding-info">
                 <TextWrapper>
-                  <Text className="t-info">祝贺新郎和新娘的结婚。</Text>
-                  <Text className="t-info">将在婚礼当天配送到婚礼场地。</Text>
+                  <Text className="t-info">祝賀新郎和新娘的結婚。</Text>
+                  <Text className="t-info">將在婚禮當天配送到婚禮場地。</Text>
                   <WrapperInfo>
-                    <Text className="t-info">详情咨询</Text>
-                    <Text className="t-info">请联系下方 Hill Sky Flower</Text>
-                    <Text className="t-info">谢谢。</Text>
+                    <Text className="t-info">詳情諮詢</Text>
+                    <Text className="t-info">請聯繫下方 Hill Sky Flower</Text>
+                    <Text className="t-info">謝謝。</Text>
                   </WrapperInfo>
                   <WrapperNumber>
                     <Text onClick={() => (window.document.location.href = "tel:010-3836-9782")}>📞 010-3836-9782</Text>
                     <Text onClick={() => (window.document.location.href = "tel:010-3221-9782")}>📞 010-3221-9782</Text>
                   </WrapperNumber>
-                  <Text className="t-info">点击电话号码将连接到联系方式。</Text>
+                  <Text className="t-info">點擊電話號碼將連接到聯繫方式。</Text>
                 </TextWrapper>
               </Flex>
             </TextWrapper>

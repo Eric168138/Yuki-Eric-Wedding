@@ -16,11 +16,11 @@ const PostModal = ({ isModalOpen, handleCloseModal }) => {
   const onCreateGuestBook = () => {
     if (title.length === 0) return;
     if (title.length >= 100) {
-      alert("祝贺语请在100字以内撰写。");
+      alert("祝賀語請在100字以內撰寫。");
       return;
     }
 
-    alert("活动已经结束了。");
+    alert("活動已經結束了。");
     handleCloseModal();
   };
 
@@ -37,7 +37,7 @@ const PostModal = ({ isModalOpen, handleCloseModal }) => {
       <Container className={isModalOpen ? "" : "disabled"}>
         <Header>
           <HeaderTextWrapper>
-            <HeaderText>💐写祝贺留言</HeaderText>
+            <HeaderText>💐寫祝賀留言</HeaderText>
           </HeaderTextWrapper>
           <IconButtonWrapper>
             <IconButton onClick={handleCloseModal}>
@@ -51,13 +51,13 @@ const PostModal = ({ isModalOpen, handleCloseModal }) => {
             <TextInput value={author} onChange={e => setAuthor(e.target.value)} type="text" label={"姓名"} />
           </TextWrapper>
           <TextWrapper>
-            <TextInput value={password} onChange={e => setPassword(e.target.value)} type="password" label={"密码"} />
+            <TextInput value={password} onChange={e => setPassword(e.target.value)} type="password" label={"密碼"} />
           </TextWrapper>
           <TextWrapper>
-            <TextInput value={title} onChange={e => setTitle(e.target.value)} type="text" label={"请撰写祝贺语！(100字以内)"} textArea />
+            <TextInput value={title} onChange={e => setTitle(e.target.value)} type="text" label={"請撰寫祝賀語！(100字以內)"} textArea />
           </TextWrapper>
           <Button className="button" onClick={onCreateGuestBook}>
-            向新郎新娘传达祝贺信
+            向新郎新娘傳達祝賀信
           </Button>
         </Wrapper>
       </Container>

@@ -4,7 +4,7 @@ import { Button } from "@mui/material";
 import ConfirmModal from "../Modal/ConfirmModal";
 import { useState } from "react";
 
-// todo 放图标 react-icone ?? fontawesome?
+// todo 放圖標 react-icone ?? fontawesome?
 export default function GuestBookList({ posts, onDelete }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [deleteGuestBookItem, setDeleteGuestBookItem] = useState(null);

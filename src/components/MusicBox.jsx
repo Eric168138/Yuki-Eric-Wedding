@@ -2,7 +2,7 @@ import { atom, useRecoilState } from "recoil";
 import myAudio from "./assets/myAudio.mp3";
 import { useEffect, useRef } from "react";
 
-//背景音乐 播放、暂停
+//背景音樂 播放、暫停
 const playState =
   atom <
   boolean >

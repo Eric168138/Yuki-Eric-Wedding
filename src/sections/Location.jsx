@@ -1,27 +1,30 @@
-import { TextCategoryTitle, EmptyBox } from "../styles";
-import styled from "styled-components";
-import useCopyClipboard from "../hooks/useCopyClipboard";
-import { toast } from "react-toastify";
+import { TextCategoryTitle, EmptyBox } from '../styles';
+import styled from 'styled-components';
+import useCopyClipboard from '../hooks/useCopyClipboard';
+import { toast } from 'react-toastify';
 
 /**
  *
- * absolute元素按最近的relative父标签顺序受到影响。
+ * absolute元素按最近的relative父標籤順序受到影響。
  *
  */
 export default function Location({ ref }) {
   const { copyToClipboard } = useCopyClipboard();
-  const notify = target => toast(`${target} 地址已复制。`);
+  const notify = (target) => toast(`${target} 文字已複製`);
 
   return (
     <Container ref={ref}>
       <Flex>
         <EmptyBox />
+        <TextCategoryTitle id="location">位置</TextCategoryTitle>
+      </Flex>
+      {/* <Flex>
+        <EmptyBox />
         <TextCategoryTitle id="location">location</TextCategoryTitle>
-        <Text>香港九龍塘根德道7號 My Palace
-</Text>
+        <Text>香港九龍塘根德道7號 My Palace</Text>
         <Text>2026年11月1日</Text>
         <Text>中午 12:00 恭候</Text>
-        {/* <MapWrapper>
+   
           <StyledA href="https://map.kakao.com/link/search/창원 힐스타이웨딩">
             <MapIcon src={process.env.PUBLIC_URL + "/nav-icon/kakaomap.png"} />
           </StyledA>
@@ -30,53 +33,49 @@ export default function Location({ ref }) {
           </StyledA>
           <StyledA href="https://tmap.life/62ffaa39">
             <MapIcon src={process.env.PUBLIC_URL + "/nav-icon/tmap.png"} />
-          </StyledA>
-          <StyledA href="https://www.google.com/maps/dir//%ED%9E%90%EC%8A%A4%EC%B9%B4%EC%9D%B4+%EC%9B%A8%EB%94%A9%26%EC%BB%A8%EB%B2%A4%EC%85%98+Gyeongsangnam-do,+Changwon-si,+Masanhoewon-gu,+Bongam-dong,+133/data=!4m8!4m7!1m0!1m5!1m1!1s0x356f33b97d989541:0x43b9f3c30f6c73d2!2m2!1d128.6014549!2d35.2190478?entry=ttu">
-            <MapIcon src={process.env.PUBLIC_URL + "/nav-icon/googlemap.png"} />
-          </StyledA>
-        </MapWrapper> */}
-      </Flex>
+          </StyledA> 
+      </Flex> */}
       <Flex>
         <LocationInfoBox>
-          <ImageWedding src={process.env.PUBLIC_URL + "/image/weddingholl-image.jpg"} />
-          <Text className="tb">📍地址</Text>
-          <Text
-            className="doc"
-            onClick={() => {
-              copyToClipboard("香港九龍塘根德道7號 My Palace");
-              notify(`地址`);
-            }}
-          >
-           香港九龍塘根德道7號 My Palace
-          </Text>
-          {/* <Text className="tb">📍 地番地址</Text>
-          <Text
-            className="doc"
-            onClick={() => {
-              copyToClipboard("凤岩洞 391-205");
-              notify(`地番`);
-            }}
-          >
-           凤岩洞 391-205
-          </Text> */}
-          <Text className="tb">🚌 乘坐公交车来的情况</Text>
-          <Text className="doc">
-            <B>凤岩工业园区入口</B>下车
-          </Text>
-          <Text className="doc">干线 - 107, 114, 160, 116, 162, 163, 164</Text>
-          <Text className="doc">支线 - 257</Text>
-          <Text className="doc">座席 - 740, 3002</Text>
-          <Text className="tb">🚙 使用私家车的情况</Text>
-          <Text className="doc">
-            ✔️ 凤岩工业园区十字路口, 昌原站, 马山市外巴士客运站, 马山水产市场, 马山站 京田线(<B>马山 凤岩水源地入口</B> 掉头后 <B>直行300m</B>)
-          </Text>
-          <Text className="doc">✔️ 镇海, 昌原, 市外巴士客运站, 昌原大路 Hill Sky 前到达</Text>
-          <Text className="doc">
-            ✔️ <B>使用自由地区桥时</B> 经过GS自助加油站 CU便利店左转
-          </Text>
-          <Text className="doc">
-            ✔️ <B>使用高速公路时</B> 东马山IC进入 距离10分钟
-          </Text>
+          <ImageWedding src={process.env.PUBLIC_URL + '/image/weddingholl-image.jpg'} />
+          <AddressRow>
+            <Div>
+              <Text className="tb">📍地址</Text>
+              <Text
+                className="p"
+                onClick={() => {
+                  copyToClipboard('香港九龍塘根德道7號 My Palace');
+                  notify(`香港九龍塘根德道7號 My Palace`);
+                }}
+              >
+                香港九龍塘根德道7號 My Palace
+              </Text>
+            </Div>
+            <Div>
+              <MapLink
+                href="https://maps.app.goo.gl/3PqZdER4nSMxVeG88"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <MapTextGroup>
+                  <ClickText>點擊開啟</ClickText>
+                  <ClickText>GoogleMap</ClickText>
+                </MapTextGroup>
+                <MapIconSmall src={process.env.PUBLIC_URL + '/nav-icon/googlemap.png'} />
+              </MapLink>
+            </Div>
+          </AddressRow>
+          <Text className="tb">🚅 乘坐地鐵的情況</Text>
+          <Text className="doc">九龍塘站 G1, F, B 出口 </Text>
+          <Text className="doc">G1 和 F 出口 : 出去後向根德道往上行6分鐘</Text>
+          <Text className="doc">B 出口 : 出去後回頭,向根德道往上行6分鐘</Text>
+          <Text className="tb">🚌 乘坐小巴，巴土的情況 </Text>
+          <Text className="doc">近九龍塘(沙福道)公共運輸交匯處(總站)</Text>
+          <Text className="doc">向根德道往上行 10分鐘</Text>
+          <Text className="tb">🚙 使用私家車的情況</Text>
+          <Text className="doc">場地沒有賓客停泊,建議公共交通公具來臨比較方便</Text>
+          <Text className="doc">最近停車場為又一城停車場,泊車後去又一城LG2層天橋出口</Text>
+          <Text className="doc">過橋後向根德道往上行,全程大約15分鐘</Text>
         </LocationInfoBox>
         <EmptyBox />
       </Flex>
@@ -118,22 +117,56 @@ const LocationInfoBox = styled.div`
   width: 80%;
 `;
 
-const MapWrapper = styled.div`
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  width: 100%;
-  margin-top: 30px;
-  margin-bottom: 30px;
+const Div = styled.div`
+  text-align: left;
 `;
 
-const MapIcon = styled.img`
-  border-radius: 12px;
-  width: 75%;
-  margin: 5px;
-  box-shadow: 2px 2px 0.3em #67676728;
+const AddressRow = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 10px;
+
+  @media (max-width: 430px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+`;
+
+const MapTextGroup = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.2;
+`;
+
+const MapLink = styled.a`
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+`;
+
+const MapIconSmall = styled.img`
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+
+  @media (max-width: 430px) {
+    width: 56px;
+    height: 56px;
+  }
+`;
+
+const ClickText = styled.span`
+  font-size: 1rem;
+  color: #888;
+  white-space: nowrap;
+
+  @media (max-width: 430px) {
+    font-size: 1rem;
+  }
 `;
 
 const Text = styled.p`
@@ -203,7 +236,12 @@ const Text = styled.p`
 
   &.tb {
     font-weight: 700;
-    margin-top: 12px;
+    margin-top: 3px;
+  }
+  &.h {
+    font-size: 2.5rem;
+    margin-top: 3px;
+    margin-button: 3px;
   }
 `;
 

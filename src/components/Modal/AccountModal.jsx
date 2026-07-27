@@ -9,22 +9,22 @@ import { toast } from "react-toastify";
 
 const bridegroom_infos = [
   {
-    name: "苏钟范",
+    name: "蘇鍾範",
     account: "",
   },
   {
-    name: "苏永植·朴淑女",
+    name: "蘇永植·朴淑女",
     account: "",
   },
 ];
 
 const bride_infos = [
   {
-    name: "权裕贞",
+    name: "權裕貞",
     account: "",
   },
   {
-    name: "权泰建·马恩英",
+    name: "權泰建·馬恩英",
     account: "",
   },
 ];
@@ -32,7 +32,7 @@ const bride_infos = [
 export default function AccountModal({ isBride, isModalOpen, setIsModalOpen }) {
   const setIsOpenModal = useSetRecoilState(modalState);
   const { copyToClipboard } = useCopyClipboard();
-  const notify = () => toast(`该信息已完成。`);
+  const notify = () => toast(`該信息已完成。`);
 
   const view_infos = isBride ? bride_infos : bridegroom_infos;
   const handleCloseModal = () => {
@@ -43,7 +43,7 @@ export default function AccountModal({ isBride, isModalOpen, setIsModalOpen }) {
       <Container className={isModalOpen ? "" : "disable"}>
         <Flex>
           <Text className="bd col modal-title">{isBride ? "新娘方" : "新郎方"}💐</Text>
-          <Text className="copy-info">点击账号号码即可复制账号。</Text>
+          <Text className="copy-info">點擊賬號號碼即可複製賬號。</Text>
           <ItemWrapper>
             <TextWrapper>
               <Text className="bd col">{isBride ? "新娘" : "新郎"}</Text>
@@ -63,7 +63,7 @@ export default function AccountModal({ isBride, isModalOpen, setIsModalOpen }) {
                   notify(view_infos[0].name);
                 }}
               >
-                复制
+                複製
               </CopyButton>
             </TextWrapper>
             <TextWrapper>
@@ -83,13 +83,13 @@ export default function AccountModal({ isBride, isModalOpen, setIsModalOpen }) {
                   notify(view_infos[1].name);
                 }}
               >
-                复制
+                複製
               </CopyButton>
             </TextWrapper>
           </ItemWrapper>
           <ButtonWrapper>
             <Button className="button" onClick={() => setIsOpenModal(true)}>
-              祝贺联系
+              祝賀聯繫
             </Button>
           </ButtonWrapper>
         </Flex>

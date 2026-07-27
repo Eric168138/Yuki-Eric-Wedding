@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export default function Poster() {
   return (
@@ -7,11 +7,10 @@ export default function Poster() {
         <RightTextBox>
           <Text>Yuki & Eric</Text>
         </RightTextBox>
-        <Image src={process.env.PUBLIC_URL + "/image/poster-image.jpeg"} />
+        <Image src={process.env.PUBLIC_URL + '/image/Poster.jpg'} />
         <Absolute>
           <Text className="f6">Yuki & Eric</Text>
-          <Text>香港九龍塘根德道7號 My Palace
-</Text>
+          <Text>香港九龍塘根德道7號 My Palace</Text>
           <Text className="f3">2026.11.1 Nov 12:00</Text>
         </Absolute>
       </ImageWrapper>
@@ -97,7 +96,7 @@ const Text = styled.p`
     @media (max-width: 360px) {
       font-size: 4.7rem;
     }
-    font-family: "yleeMortalHeart-ImmortalMemory";
+    font-family: 'yleeMortalHeart-ImmortalMemory';
     font-size: 6rem;
     margin-bottom: 10px;
   }
@@ -117,7 +116,7 @@ const Text = styled.p`
     @media (max-width: 360px) {
       font-size: 2.8rem;
     }
-    font-family: "yleeMortalHeart-ImmortalMemory";
+    font-family: 'yleeMortalHeart-ImmortalMemory';
     font-size: 3rem;
   }
 `;
