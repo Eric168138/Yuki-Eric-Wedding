@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/Yuki-Eric-Wedding/static/css/main.737ed4f7.css",
+    "main.js": "/Yuki-Eric-Wedding/static/js/main.f75bb7d5.js",
+    "static/js/453.d44728da.chunk.js": "/Yuki-Eric-Wedding/static/js/453.d44728da.chunk.js",
+    "static/media/GowunDodum-Regular.woff2": "/Yuki-Eric-Wedding/static/media/GowunDodum-Regular.5cc66f3a81d5d53d30d8.woff2",
+    "static/media/yleeMortalHeart-ImmortalMemory.woff2": "/Yuki-Eric-Wedding/static/media/yleeMortalHeart-ImmortalMemory.d1a76a289760157b4a94.woff2",
+    "static/media/slick.svg": "/Yuki-Eric-Wedding/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/Yuki-Eric-Wedding/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/Yuki-Eric-Wedding/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "index.html": "/Yuki-Eric-Wedding/index.html",
+    "static/media/slick.woff": "/Yuki-Eric-Wedding/static/media/slick.295183786cd8a1389865.woff",
+    "main.737ed4f7.css.map": "/Yuki-Eric-Wedding/static/css/main.737ed4f7.css.map",
+    "main.f75bb7d5.js.map": "/Yuki-Eric-Wedding/static/js/main.f75bb7d5.js.map",
+    "453.d44728da.chunk.js.map": "/Yuki-Eric-Wedding/static/js/453.d44728da.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.737ed4f7.css",
+    "static/js/main.f75bb7d5.js"
+  ]
+}
