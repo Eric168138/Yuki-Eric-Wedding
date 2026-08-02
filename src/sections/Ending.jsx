@@ -1,11 +1,13 @@
-import styled from "styled-components";
-import { Flex } from "../styles";
-import HeartIcon from "../components/Icons/heart";
+import styled from 'styled-components';
+import { Flex } from '../styles';
+import HeartIcon from '../components/Icons/heart';
 export default function Ending() {
   return (
     <Container>
       <Flex>
-        <Text><HeartIcon /> 我們會幸福好好地生活的 <HeartIcon /> </Text>
+        <Text>
+          <HeartIcon /> 我們會幸福健康,好好地生活的 <HeartIcon />{' '}
+        </Text>
       </Flex>
     </Container>
   );

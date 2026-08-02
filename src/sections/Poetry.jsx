@@ -12,13 +12,12 @@ export default function Poetry() {
         <BackgoundImage src={process.env.PUBLIC_URL + '/image/form-background.png'} />
         <Flower className="f-t" src={process.env.PUBLIC_URL + '/image/flower.png'} />
         <TextWrapper className="align-l">
-          <Text>十一月,</Text>
-          <Text>誠邀一直陪伴在身邊的感恩之人們。</Text>
-          <Text>愛著彼此本來的樣子</Text>
-          <Text>感恩彼此的存在</Text>
-          <Text>結下緣分的我們兩人</Text>
-          <Text>和在一起就心情變好的你一起</Text>
-          <Text>將一起走人生的路。</Text>
+          <Text>十一月，</Text>
+          <Text>誠邀你來見證我們的幸福。</Text>
+          <Text>因為有你們一路相伴，</Text>
+          <Text>我們的故事才更加完整。</Text>
+          <Text>期待這一天，</Text>
+          <Text>與親愛的你分享這份愛與喜悅。</Text>
         </TextWrapper>
         <Flower className="f-b" src={process.env.PUBLIC_URL + '/image/flower.png'} />
       </FormWrapper>

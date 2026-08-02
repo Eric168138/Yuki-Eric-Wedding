@@ -32,4 +32,5 @@ const InviteText = styled.p`
 const StyledWrapper = styled(TextWrapper)`
   height: 100%;
   justify-content: center;
+  background-color: transparent;
 `;

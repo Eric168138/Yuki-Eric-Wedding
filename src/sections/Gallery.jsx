@@ -1,13 +1,13 @@
-import { Flex, TextCategoryTitle, EmptyBox } from "../styles";
-import styled from "styled-components";
-import MultiSlick from "../components/Slick/MultiSlick";
-import { useState, useRef } from "react";
-import ImageModal from "../components/Modal/ImageModal";
-import { _imageSrcArray, _path } from "../constants/image";
+import { Flex, TextCategoryTitle, EmptyBox, Flower } from '../styles';
+import styled from 'styled-components';
+import MultiSlick from '../components/Slick/MultiSlick';
+import { useState, useRef } from 'react';
+import ImageModal from '../components/Modal/ImageModal';
+import { _imageSrcArray, _path } from '../constants/image';
 
 export default function Gallery() {
   const [isImageModalOpen, setIsImageModalOpen] = useState(false);
-  const [imageSrc, setImageSrc] = useState("");
+  const [imageSrc, setImageSrc] = useState('');
   const [tab, setTab] = useState(0);
 
   const slideRef = useRef(null);
@@ -22,18 +22,30 @@ export default function Gallery() {
   return (
     <Container>
       <Flex className="blue" ref={testRef} data-aos="fade-up" data-aos-duration="900">
-        <EmptyBox />
-        <TextCategoryTitle>gallery</TextCategoryTitle>
+        <Flower className="f-t" src={process.env.PUBLIC_URL + '/image/flower.png'} />
+        <TextCategoryTitle>相簿</TextCategoryTitle>
         <SliderWraper>
           <MultiSlick>
             {_imageSrcArray.map((src, index) => (
-              <WeddingImage src={`${_path}/${src}`} onClick={() => handleOpenModal(src, index)} key={index} loading="lazy" decoding="async" />
+              <WeddingImage
+                src={`${_path}/${src}`}
+                onClick={() => handleOpenModal(src, index)}
+                key={index}
+                loading="lazy"
+                decoding="async"
+              />
             ))}
           </MultiSlick>
         </SliderWraper>
         <EmptyBox />
       </Flex>
-      <ImageModal ref={slideRef} isModalOpen={isImageModalOpen} src={imageSrc} handleCloseModal={() => setIsImageModalOpen(false)} tab={tab} />
+      <ImageModal
+        ref={slideRef}
+        isModalOpen={isImageModalOpen}
+        src={imageSrc}
+        handleCloseModal={() => setIsImageModalOpen(false)}
+        tab={tab}
+      />
     </Container>
   );
 }

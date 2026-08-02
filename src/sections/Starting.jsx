@@ -17,7 +17,7 @@ const Container = styled.div`
 
 const ImgWrapper = styled.div`
   height: 100%;
-  background-color: #f0ede6;
+  background-color: transparent;
 `;
 
 const Image = styled.img`

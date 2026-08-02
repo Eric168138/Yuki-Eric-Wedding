@@ -19,11 +19,6 @@ export default function CalendarSection() {
       </Flex>
       <Flex>
         <TextWrapper data-aos="zoom-in-up" data-aos-delay="100">
-          <Image
-            src={process.env.PUBLIC_URL + '/image/calendar.png'}
-            data-aos="flip-left"
-            data-aos-easing="ease-out-cubic"
-          />
           <Text className="h">2026年11月1日</Text>
           <ScheduleTable>
             <tbody>
@@ -54,8 +49,12 @@ export default function CalendarSection() {
               </tr>
             </tbody>
           </ScheduleTable>
+          <Image
+            src={process.env.PUBLIC_URL + '/image/calendar.png'}
+            data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+          />
         </TextWrapper>
-        {/* <EmptyBox /> */}
         <TextWrapper data-aos="zoom-in-up" data-aos-delay="100">
           <Flex>
             {isPast ? <TheTimes targetDate={targetDate} /> : <DdayCount targetDate={targetDate} />}
@@ -93,7 +92,7 @@ const Text = styled.p`
 
 const Image = styled.img`
   display: block;
-  margin: 0 auto 50px;
+  margin: 0 auto 5px;
   width: 75%;
 `;
 
