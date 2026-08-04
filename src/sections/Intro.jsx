@@ -1,5 +1,5 @@
-import { useEffect, useRef, useState } from "react";
-import styled from "styled-components";
+import { useEffect, useRef, useState } from 'react';
+import styled from 'styled-components';
 
 export default function Intro() {
   const textRef = useRef();
@@ -7,8 +7,8 @@ export default function Intro() {
   const [fadeout, setFadeout] = useState(false);
 
   //編寫javascript
-  const string = "蘇鍾範 ♥️ 權裕貞 2024年6月2日 結婚了。"; //在string变量中声明想要的文本
-  const split = string.split(""); //將string的文本分成多個字符串
+  const string = 'Yuki ♥️ Eric 2026年11月1日 結婚了。'; //在string变量中声明想要的文本
+  const split = string.split(''); //將string的文本分成多個字符串
 
   function dynamic(arr) {
     if (arr.length > 0) {
@@ -21,7 +21,7 @@ export default function Intro() {
 
   useEffect(() => {
     function blink() {
-      textRef.current.classList.toggle("active"); // 反覆給dynamic添加<->刪除active類
+      textRef.current.classList.toggle('active'); // 反覆給dynamic添加<->刪除active類
     }
     setInterval(blink, 500); // 每0.5秒執行blink函數
   }, []);
@@ -38,7 +38,7 @@ export default function Intro() {
     // eslint-disable-next-line
   }, []);
   return (
-    <Container className={fadeout ? "fadeout" : ""}>
+    <Container className={fadeout ? 'fadeout' : ''}>
       <Wrapper>
         <Flex>
           <div className="hero">
@@ -120,7 +120,7 @@ const Wrapper = styled.div`
 
   /*製作光標形狀*/
   .hero #dynamic::after {
-    content: "";
+    content: '';
     display: block;
     position: absolute;
     top: 0;

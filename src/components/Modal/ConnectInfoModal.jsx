@@ -1,15 +1,15 @@
-import styled from "styled-components";
-import { useRecoilState } from "recoil";
-import infoModalState from "../../store/infoModal";
-import "react-toastify/dist/ReactToastify.css";
+import styled from 'styled-components';
+import { useRecoilState } from 'recoil';
+import infoModalState from '../../store/infoModal';
+import 'react-toastify/dist/ReactToastify.css';
 
 const people_info = [
-  { account: "", phone: "" },
-  { account: "", phone: "" },
-  { account: "", phone: "" },
-  { account: "", phone: "" },
-  { account: "", phone: "" },
-  { account: "", phone: "" },
+  { account: '', phone: '' },
+  { account: '', phone: '' },
+  { account: '', phone: '' },
+  { account: '', phone: '' },
+  { account: '', phone: '' },
+  { account: '', phone: '' },
 ];
 
 export default function ConnectInfoModal() {
@@ -19,13 +19,13 @@ export default function ConnectInfoModal() {
     setIsModalOpen(false);
   };
 
-  if (typeof window !== "object") {
+  if (typeof window !== 'object') {
     return <></>;
   }
 
   return (
     <>
-      <Container className={isModalOpen ? "" : "disable"}>
+      <Container className={isModalOpen ? '' : 'disable'}>
         <Flex>
           <H1Text>傳達心意的地方💐</H1Text>
           <GuideWrapper>
@@ -40,14 +40,14 @@ export default function ConnectInfoModal() {
           <NameListWrapper>
             <Text className="h2">新郎💍新娘</Text>
             <NameWrapper>
-              <Text>新郎 </Text> <B>蘇鍾範</B>
-              <CallingBox onClick={() => alert("當前活動已完成。")}>祝賀電話📞</CallingBox>
-              <MessageBox onClick={() => alert("當前活動已完成。")}>祝賀短信 ✉️</MessageBox>
+              <Text>新郎 </Text> <B>Eric</B>
+              <CallingBox onClick={() => alert('當前活動已完成。')}>祝賀電話📞</CallingBox>
+              <MessageBox onClick={() => alert('當前活動已完成。')}>祝賀短信 ✉️</MessageBox>
             </NameWrapper>
             <NameWrapper>
-              <Text>新娘 </Text> <B>權裕貞</B>
-              <CallingBox onClick={() => alert("當前活動已完成。")}>祝賀電話📞</CallingBox>
-              <MessageBox onClick={() => alert("當前活動已完成。")}>祝賀短信 ✉️</MessageBox>
+              <Text>新娘 </Text> <B>Yuki</B>
+              <CallingBox onClick={() => alert('當前活動已完成。')}>祝賀電話📞</CallingBox>
+              <MessageBox onClick={() => alert('當前活動已完成。')}>祝賀短信 ✉️</MessageBox>
             </NameWrapper>
           </NameListWrapper>
           <NameListWrapper>
@@ -57,14 +57,14 @@ export default function ConnectInfoModal() {
             </NameWrapper>
 
             <NameWrapper>
-              <Text>新郎父親 </Text> <B>蘇永植</B>
-              <CallingBox onClick={() => alert("當前活動已完成。")}>祝賀電話📞</CallingBox>
-              <MessageBox onClick={() => alert("當前活動已完成。")}>祝賀短信 ✉️</MessageBox>
+              <Text>新郎父親 </Text> <B></B>
+              <CallingBox onClick={() => alert('當前活動已完成。')}>祝賀電話📞</CallingBox>
+              <MessageBox onClick={() => alert('當前活動已完成。')}>祝賀短信 ✉️</MessageBox>
             </NameWrapper>
             <NameWrapper>
-              <Text>新郎母親 </Text> <B>朴淑女</B>
-              <CallingBox onClick={() => alert("當前活動已完成。")}>祝賀電話📞</CallingBox>
-              <MessageBox onClick={() => alert("當前活動已完成。")}>祝賀短信 ✉️</MessageBox>
+              <Text>新郎母親 </Text> <B></B>
+              <CallingBox onClick={() => alert('當前活動已完成。')}>祝賀電話📞</CallingBox>
+              <MessageBox onClick={() => alert('當前活動已完成。')}>祝賀短信 ✉️</MessageBox>
             </NameWrapper>
           </NameListWrapper>
           <NameListWrapper>
@@ -74,20 +74,20 @@ export default function ConnectInfoModal() {
             </NameWrapper>
 
             <NameWrapper>
-              <Text>新娘父親 </Text> <B>權泰建</B>
-              <CallingBox onClick={() => alert("當前活動已完成。")}>祝賀電話📞</CallingBox>
-              <MessageBox onClick={() => alert("當前活動已完成。")}>祝賀短信 ✉️</MessageBox>
+              <Text>新娘父親 </Text> <B></B>
+              <CallingBox onClick={() => alert('當前活動已完成。')}>祝賀電話📞</CallingBox>
+              <MessageBox onClick={() => alert('當前活動已完成。')}>祝賀短信 ✉️</MessageBox>
             </NameWrapper>
             <NameWrapper>
-              <Text>新娘母親 </Text> <B>馬恩英</B>
-              <CallingBox onClick={() => alert("當前活動已完成。")}>祝賀電話📞</CallingBox>
-              <MessageBox onClick={() => alert("當前活動已完成。")}>祝賀短信 ✉️</MessageBox>
+              <Text>新娘母親 </Text> <B></B>
+              <CallingBox onClick={() => alert('當前活動已完成。')}>祝賀電話📞</CallingBox>
+              <MessageBox onClick={() => alert('當前活動已完成。')}>祝賀短信 ✉️</MessageBox>
             </NameWrapper>
           </NameListWrapper>
           <CloseButton onClick={handleCloseModal}>關閉</CloseButton>
         </Flex>
       </Container>
-      <Dimed className={isModalOpen ? "" : "disable"} onClick={handleCloseModal} />
+      <Dimed className={isModalOpen ? '' : 'disable'} onClick={handleCloseModal} />
     </>
   );
 }
@@ -513,7 +513,7 @@ const CloseButton = styled.button`
   border: none;
   border: 0px;
   background-color: #c8bbad;
-  font-family: "GowunDodum-Regular";
+  font-family: 'GowunDodum-Regular';
   border-radius: 10px;
   padding: 8px 12px;
   width: 45%;

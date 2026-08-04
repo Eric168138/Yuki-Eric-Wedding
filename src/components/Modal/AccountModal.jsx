@@ -1,31 +1,31 @@
-import styled from "styled-components";
-import { Dimed } from "./ConnectInfoModal";
-import useCopyClipboard from "../../hooks/useCopyClipboard";
-import { useSetRecoilState } from "recoil";
-import modalState from "../../store/infoModal";
+import styled from 'styled-components';
+import { Dimed } from './ConnectInfoModal';
+import useCopyClipboard from '../../hooks/useCopyClipboard';
+import { useSetRecoilState } from 'recoil';
+import modalState from '../../store/infoModal';
 
-import Button from "../Button/Button";
-import { toast } from "react-toastify";
+import Button from '../Button/Button';
+import { toast } from 'react-toastify';
 
 const bridegroom_infos = [
   {
-    name: "蘇鍾範",
-    account: "",
+    name: 'Yuki',
+    account: '',
   },
   {
-    name: "蘇永植·朴淑女",
-    account: "",
+    name: '蘇永植·朴淑女',
+    account: '',
   },
 ];
 
 const bride_infos = [
   {
-    name: "權裕貞",
-    account: "",
+    name: 'Eric',
+    account: '',
   },
   {
-    name: "權泰建·馬恩英",
-    account: "",
+    name: '權泰建·馬恩英',
+    account: '',
   },
 ];
 
@@ -40,13 +40,13 @@ export default function AccountModal({ isBride, isModalOpen, setIsModalOpen }) {
   };
   return (
     <>
-      <Container className={isModalOpen ? "" : "disable"}>
+      <Container className={isModalOpen ? '' : 'disable'}>
         <Flex>
-          <Text className="bd col modal-title">{isBride ? "新娘方" : "新郎方"}💐</Text>
+          <Text className="bd col modal-title">{isBride ? '新娘方' : '新郎方'}💐</Text>
           <Text className="copy-info">點擊賬號號碼即可複製賬號。</Text>
           <ItemWrapper>
             <TextWrapper>
-              <Text className="bd col">{isBride ? "新娘" : "新郎"}</Text>
+              <Text className="bd col">{isBride ? '新娘' : '新郎'}</Text>
               <Text className="bd"> {view_infos[0].name}</Text>
               <Text
                 className="copy-text"
@@ -94,7 +94,7 @@ export default function AccountModal({ isBride, isModalOpen, setIsModalOpen }) {
           </ButtonWrapper>
         </Flex>
       </Container>
-      <Dimed className={isModalOpen ? "" : "disable"} onClick={handleCloseModal} />
+      <Dimed className={isModalOpen ? '' : 'disable'} onClick={handleCloseModal} />
     </>
   );
 }

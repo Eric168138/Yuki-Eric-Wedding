@@ -63,19 +63,32 @@ export default function Location({ ref }) {
                 </MapTextGroup>
                 <MapIconSmall src={process.env.PUBLIC_URL + '/nav-icon/googlemap.png'} />
               </MapLink>
+              {/* <MapLink
+                href="https://surl.amap.com/2jNbsYqF5rC"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <MapTextGroup>
+                  <ClickText>點擊開啟</ClickText>
+                  <ClickText>高德地圖</ClickText>
+                </MapTextGroup>
+              </MapLink> */}
             </Div>
           </AddressRow>
+          <Text className="doc">&nbsp;</Text>
           <Text className="tb">🚅 乘坐地鐵的情況</Text>
           <Text className="doc">九龍塘站 G1, F, B 出口 </Text>
-          <Text className="doc">G1 和 F 出口 : 出去後向根德道往上行6分鐘</Text>
-          <Text className="doc">B 出口 : 出去後回頭,向根德道往上行6分鐘</Text>
+          <Text className="doc">G1和F出口 : 出去後向根德道往上行6分鐘</Text>
+          <Text className="doc">B出口 : 出去後回頭,向根德道往上行6分鐘</Text>
+          <Text className="doc">&nbsp;</Text>
           <Text className="tb">🚌 乘坐小巴，巴土的情況 </Text>
-          <Text className="doc">近九龍塘(沙福道)公共運輸交匯處(總站)</Text>
-          <Text className="doc">向根德道往上行 10分鐘</Text>
+          <Text className="doc">近九龍塘(沙福道)公共運輸交匯處(總站),向根德道往上行10分。</Text>
+          <Text className="doc">&nbsp;</Text>
           <Text className="tb">🚙 使用私家車的情況</Text>
-          <Text className="doc">場地沒有賓客停泊,建議公共交通公具來臨比較方便</Text>
-          <Text className="doc">最近停車場為又一城停車場,泊車後去又一城LG2層天橋出口</Text>
-          <Text className="doc">過橋後向根德道往上行,全程大約15分鐘</Text>
+          <Text className="doc">場地沒有賓客停泊,建議公共交通公具來臨比較方便。</Text>
+          <Text className="doc">
+            最近停車場為又一城停車場,泊車後去又一城LG2層天橋出口,過橋後向根德道往上行,全程大約15分鐘。
+          </Text>
         </LocationInfoBox>
         <EmptyBox />
       </Flex>

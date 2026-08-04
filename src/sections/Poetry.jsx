@@ -107,15 +107,15 @@ const Text = styled.span`
   text-align: center;
   &.t1 {
     @media (max-width: 414px) {
-      font-size: 1.4rem;
+      font-size: 1.3rem;
     }
     @media (max-width: 375px) {
-      font-size: 1.5rem;
-    }
-    @media (max-width: 290px) {
       font-size: 1.4rem;
     }
-    font-size: 1.3rem;
+    @media (max-width: 290px) {
+      font-size: 1.3rem;
+    }
+    font-size: 1.4rem;
     text-align: left;
   }
   &.t2 {

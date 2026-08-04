@@ -70,16 +70,14 @@ function App() {
             <StyledNav className={isShow ? 'active' : ''}>已為您準備好背景音樂。</StyledNav>
             {isMounted && (
               <>
-                <OnePage>
-                  {new Date() < targetDate ? (
-                    <>
-                      <Invite height="10%" />
-                      <Starting height="90%" />
-                    </>
-                  ) : (
-                    <Starting height="100%" />
-                  )}
-                </OnePage>
+                {new Date() < targetDate ? (
+                  <>
+                    <Invite height="10%" />
+                  </>
+                ) : (
+                  ''
+                )}
+                <Starting height="100%" />
                 <Poetry />
                 <Calendar />
                 <Location />

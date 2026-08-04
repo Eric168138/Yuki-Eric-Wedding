@@ -54,9 +54,9 @@ const Text = styled.p`
     font-family: 'yleeMortalHeart-ImmortalMemory';
   }
   &.t2 {
-    font-size: 1.6rem;
+    font-size: 2.4rem;
     letter-spacing: -0.5px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
   }
 
   &.mb-48 {

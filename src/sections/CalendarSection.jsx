@@ -1,9 +1,8 @@
 import styled from 'styled-components';
-import { TextCategoryTitle, EmptyBox, Flex } from '../styles';
+import { TextCategoryTitle, EmptyBox, Flex, Flower } from '../styles';
 import HeartIcon from '../components/Icons/heart';
 import useCopyClipboard from '../hooks/useCopyClipboard';
 import { toast } from 'react-toastify';
-
 import { DdayCount, TheTimes } from '../components/DdayCount';
 
 const targetDate = new Date(2026, 11, 1, 12, 0);
@@ -45,7 +44,12 @@ export default function CalendarSection() {
               <tr>
                 <td className="time">13:30 入席</td>
                 <td className="divider"></td>
-                <td className="event">地面 Grand Hall</td>
+                <td className="event">地面 Grand Hall </td>
+              </tr>
+              <tr>
+                <td className="time"></td>
+                <td className="divider"></td>
+                <td className="event">有留言電話同PhotoBooth,早D黎玩</td>
               </tr>
             </tbody>
           </ScheduleTable>
@@ -60,6 +64,8 @@ export default function CalendarSection() {
             {isPast ? <TheTimes targetDate={targetDate} /> : <DdayCount targetDate={targetDate} />}
           </Flex>
         </TextWrapper>
+        <EmptyBox />
+        <Flower className="f-t" src={process.env.PUBLIC_URL + '/image/flower.png'} />
       </Flex>
     </Container>
   );
