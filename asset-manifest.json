@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Yuki-Eric-Wedding/static/css/main.9f4f3125.css",
-    "main.js": "/Yuki-Eric-Wedding/static/js/main.439fc0d1.js",
+    "main.js": "/Yuki-Eric-Wedding/static/js/main.ae5e6165.js",
     "static/js/453.d44728da.chunk.js": "/Yuki-Eric-Wedding/static/js/453.d44728da.chunk.js",
     "static/media/ChenYuluoyan-Thin.ttf": "/Yuki-Eric-Wedding/static/media/ChenYuluoyan-Thin.4fbf96b1873bf6490e2f.ttf",
     "static/media/GowunDodum-Regular.woff2": "/Yuki-Eric-Wedding/static/media/GowunDodum-Regular.5cc66f3a81d5d53d30d8.woff2",
@@ -12,11 +12,11 @@
     "index.html": "/Yuki-Eric-Wedding/index.html",
     "static/media/slick.woff": "/Yuki-Eric-Wedding/static/media/slick.295183786cd8a1389865.woff",
     "main.9f4f3125.css.map": "/Yuki-Eric-Wedding/static/css/main.9f4f3125.css.map",
-    "main.439fc0d1.js.map": "/Yuki-Eric-Wedding/static/js/main.439fc0d1.js.map",
+    "main.ae5e6165.js.map": "/Yuki-Eric-Wedding/static/js/main.ae5e6165.js.map",
     "453.d44728da.chunk.js.map": "/Yuki-Eric-Wedding/static/js/453.d44728da.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9f4f3125.css",
-    "static/js/main.439fc0d1.js"
+    "static/js/main.ae5e6165.js"
   ]
 }
