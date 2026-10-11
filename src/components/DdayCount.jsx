@@ -21,11 +21,11 @@ const TheTimes = ({ targetDate }) => {
   const [times, setTimes] = useState(calculateLastTimes());
 
   useEffect(() => {
-    const timer = setTimeout(() => {
+    const timer = setInterval(() => {
       setTimes(calculateLastTimes());
     }, 1000);
-    return () => clearTimeout(timer);
-  });
+    return () => clearInterval(timer);
+  }, []);
 
   const { days, hours, minutes, seconds } = times;
 
@@ -61,12 +61,12 @@ const DdayCount = ({ targetDate }) => {
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
 
   useEffect(() => {
-    const timer = setTimeout(() => {
+    const timer = setInterval(() => {
       setTimeLeft(calculateTimeLeft());
     }, 1000);
 
-    return () => clearTimeout(timer);
-  });
+    return () => clearInterval(timer);
+  }, []);
 
   const { days, hours, minutes, seconds } = timeLeft;
 

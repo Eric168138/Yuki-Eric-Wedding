@@ -5,7 +5,7 @@ import useCopyClipboard from '../hooks/useCopyClipboard';
 import { toast } from 'react-toastify';
 import { DdayCount, TheTimes } from '../components/DdayCount';
 
-const targetDate = new Date(2026, 11, 1, 12, 0);
+const targetDate = new Date(2026, 10, 1, 12, 0);
 
 export default function CalendarSection() {
   const { copyToClipboard } = useCopyClipboard();
